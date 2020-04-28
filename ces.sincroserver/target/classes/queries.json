@@ -1,0 +1,38 @@
+{
+  "insertDriver" : {
+    "query": "insert into driver (first_name, middle_name, last_name, driver_licence_number, cc_number, phone_number, email) values (:first_name, :middle_name, :last_name, :driver_licence_number, :cc_number, :phone_number, :email)",
+    "parameters": {},
+    "where" : ""
+  },
+  "getDriver": {
+    "query" : "select * from driver where 1 = 1",
+    "parameters" : {
+      "driver_id" : " and driver_id = :driver_id",
+      "cc_number" : " and cc_number = :cc_number",
+      "driver_licence_number" : " and driver_licence_number = :driver_licence_number",
+      "phone_number" : " and phone_number = :phone_number",
+      "email" : " and email = :email"
+    },
+    "where" : ""
+  },
+  "updateDriver" : {
+    "query": "update driver set first_name = :first_name, middle_name = :middle_name, last_name = :last_name, phone_number = :phone_number, email = :email where 1 = 1",
+    "parameters": {
+      "driver_id" : " and driver_id = :driver_id",
+      "cc_number" : " and cc_number = :cc_number",
+      "driver_licence_number" : " and driver_licence_number = :driver_licence_number"
+    },
+    "where" : ""
+  },
+  "deleteDriver": {
+    "query" : "delete from driver where 1 = 1",
+    "parameters" : {
+      "driver_id" : " and driver_id = :driver_id",
+      "cc_number" : " and cc_number = :cc_number",
+      "driver_licence_number" : " and driver_licence_number = :driver_licence_number",
+      "phone_number" : " and phone_number = :phone_number",
+      "email" : " and email = :email"
+    },
+    "where" : ""
+  }
+}

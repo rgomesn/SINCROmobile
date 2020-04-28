@@ -1,0 +1,227 @@
+Starting SincroserverApplicationTests on DESKTOP-HJ48AFI with PID 18340 (started by darkw in C:\Users\darkw\Documents\PS1920\sincroserver)
+Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+The following profiles are active: dev
+Started SincroserverApplicationTests in 9.472 seconds (JVM running for 11.262)
+get Driver{driver_id=0, first_name='Rafael', middle_name='Gomes', last_name='Nobre', cc_number='123456789', driver_licence_number='251489558', phone_number='933417044', email='a39267@alunos.isel.pt'}
+insert Driver{driver_id=0, first_name='Rafael', middle_name='Gomes', last_name='Nobre', cc_number='123456789', driver_licence_number='251489558', phone_number='933417044', email='a39267@alunos.isel.pt'}
+get Driver{driver_id=0, first_name='', middle_name='', last_name='', cc_number='123456789', driver_licence_number='', phone_number='', email=''}
+get Driver{driver_id=0, first_name='', middle_name='', last_name='', cc_number='', driver_licence_number='251489558', phone_number='', email=''}
+get Driver{driver_id=0, first_name='', middle_name='', last_name='', cc_number='', driver_licence_number='', phone_number='933417044', email=''}
+get Driver{driver_id=0, first_name='', middle_name='', last_name='', cc_number='', driver_licence_number='', phone_number='', email='a39267@alunos.isel.pt'}
+update Driver{driver_id=46, first_name='Rafael', middle_name='Gomes', last_name='Nobre', cc_number='123456789', driver_licence_number='251489558', phone_number='933417044', email='rafael.gomes.nobre@gmail.com'}
+get Driver{driver_id=0, first_name='', middle_name='', last_name='', cc_number='', driver_licence_number='', phone_number='', email='a39267@alunos.isel.pt'}
+Starting SincroserverApplicationTests on DESKTOP-HJ48AFI with PID 8868 (started by darkw in C:\Users\darkw\Documents\PS1920\sincroserver)
+Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+The following profiles are active: dev
+Started SincroserverApplicationTests in 9.965 seconds (JVM running for 13.99)
+Unexpected error occurred in scheduled task
+org.springframework.jdbc.BadSqlGrammarException: PreparedStatementCallback; bad SQL grammar [DELETE FROM SPRING_SESSION WHERE EXPIRY_TIME < ?]; nested exception is java.sql.SQLSyntaxErrorException: Table 'sincrodb.spring_session' doesn't exist
+	at org.springframework.jdbc.support.SQLErrorCodeSQLExceptionTranslator.doTranslate(SQLErrorCodeSQLExceptionTranslator.java:235) ~[spring-jdbc-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:72) ~[spring-jdbc-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.jdbc.core.JdbcTemplate.translateException(JdbcTemplate.java:1443) ~[spring-jdbc-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:633) ~[spring-jdbc-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.jdbc.core.JdbcTemplate.update(JdbcTemplate.java:862) ~[spring-jdbc-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.jdbc.core.JdbcTemplate.update(JdbcTemplate.java:917) ~[spring-jdbc-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.jdbc.core.JdbcTemplate.update(JdbcTemplate.java:927) ~[spring-jdbc-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.session.jdbc.JdbcIndexedSessionRepository.lambda$cleanUpExpiredSessions$8(JdbcIndexedSessionRepository.java:553) ~[spring-session-jdbc-2.2.1.RELEASE.jar:2.2.1.RELEASE]
+	at org.springframework.transaction.support.TransactionTemplate.execute(TransactionTemplate.java:140) ~[spring-tx-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.session.jdbc.JdbcIndexedSessionRepository.cleanUpExpiredSessions(JdbcIndexedSessionRepository.java:553) ~[spring-session-jdbc-2.2.1.RELEASE.jar:2.2.1.RELEASE]
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54) [spring-context-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.scheduling.concurrent.ReschedulingRunnable.run(ReschedulingRunnable.java:93) [spring-context-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) [?:?]
+	at java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:264) [?:?]
+	at java.util.concurrent.FutureTask.run(FutureTask.java) [?:?]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) [?:?]
+	at java.lang.Thread.run(Thread.java:834) [?:?]
+Caused by: java.sql.SQLSyntaxErrorException: Table 'sincrodb.spring_session' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120) ~[mysql-connector-java-8.0.19.jar:8.0.19]
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97) ~[mysql-connector-java-8.0.19.jar:8.0.19]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[mysql-connector-java-8.0.19.jar:8.0.19]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953) ~[mysql-connector-java-8.0.19.jar:8.0.19]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1092) ~[mysql-connector-java-8.0.19.jar:8.0.19]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1040) ~[mysql-connector-java-8.0.19.jar:8.0.19]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeLargeUpdate(ClientPreparedStatement.java:1347) ~[mysql-connector-java-8.0.19.jar:8.0.19]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdate(ClientPreparedStatement.java:1025) ~[mysql-connector-java-8.0.19.jar:8.0.19]
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61) ~[HikariCP-3.4.2.jar:?]
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeUpdate(HikariProxyPreparedStatement.java) ~[HikariCP-3.4.2.jar:?]
+	at org.springframework.jdbc.core.JdbcTemplate.lambda$update$0(JdbcTemplate.java:867) ~[spring-jdbc-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:617) ~[spring-jdbc-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	... 15 more
+Unexpected error occurred in scheduled task
+org.springframework.jdbc.BadSqlGrammarException: PreparedStatementCallback; bad SQL grammar [DELETE FROM SPRING_SESSION WHERE EXPIRY_TIME < ?]; nested exception is java.sql.SQLSyntaxErrorException: Table 'sincrodb.spring_session' doesn't exist
+	at org.springframework.jdbc.support.SQLErrorCodeSQLExceptionTranslator.doTranslate(SQLErrorCodeSQLExceptionTranslator.java:235) ~[spring-jdbc-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:72) ~[spring-jdbc-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.jdbc.core.JdbcTemplate.translateException(JdbcTemplate.java:1443) ~[spring-jdbc-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:633) ~[spring-jdbc-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.jdbc.core.JdbcTemplate.update(JdbcTemplate.java:862) ~[spring-jdbc-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.jdbc.core.JdbcTemplate.update(JdbcTemplate.java:917) ~[spring-jdbc-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.jdbc.core.JdbcTemplate.update(JdbcTemplate.java:927) ~[spring-jdbc-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.session.jdbc.JdbcIndexedSessionRepository.lambda$cleanUpExpiredSessions$8(JdbcIndexedSessionRepository.java:553) ~[spring-session-jdbc-2.2.1.RELEASE.jar:2.2.1.RELEASE]
+	at org.springframework.transaction.support.TransactionTemplate.execute(TransactionTemplate.java:140) ~[spring-tx-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.session.jdbc.JdbcIndexedSessionRepository.cleanUpExpiredSessions(JdbcIndexedSessionRepository.java:553) ~[spring-session-jdbc-2.2.1.RELEASE.jar:2.2.1.RELEASE]
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54) [spring-context-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.scheduling.concurrent.ReschedulingRunnable.run(ReschedulingRunnable.java:93) [spring-context-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) [?:?]
+	at java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:264) [?:?]
+	at java.util.concurrent.FutureTask.run(FutureTask.java) [?:?]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) [?:?]
+	at java.lang.Thread.run(Thread.java:834) [?:?]
+Caused by: java.sql.SQLSyntaxErrorException: Table 'sincrodb.spring_session' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120) ~[mysql-connector-java-8.0.19.jar:8.0.19]
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97) ~[mysql-connector-java-8.0.19.jar:8.0.19]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[mysql-connector-java-8.0.19.jar:8.0.19]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953) ~[mysql-connector-java-8.0.19.jar:8.0.19]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1092) ~[mysql-connector-java-8.0.19.jar:8.0.19]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1040) ~[mysql-connector-java-8.0.19.jar:8.0.19]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeLargeUpdate(ClientPreparedStatement.java:1347) ~[mysql-connector-java-8.0.19.jar:8.0.19]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdate(ClientPreparedStatement.java:1025) ~[mysql-connector-java-8.0.19.jar:8.0.19]
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61) ~[HikariCP-3.4.2.jar:?]
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeUpdate(HikariProxyPreparedStatement.java) ~[HikariCP-3.4.2.jar:?]
+	at org.springframework.jdbc.core.JdbcTemplate.lambda$update$0(JdbcTemplate.java:867) ~[spring-jdbc-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:617) ~[spring-jdbc-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	... 15 more
+Starting SincroserverApplicationTests on DESKTOP-HJ48AFI with PID 11820 (started by darkw in C:\Users\darkw\Documents\PS1920\sincroserver)
+Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+The following profiles are active: dev
+Started SincroserverApplicationTests in 10.704 seconds (JVM running for 12.575)
+get Driver{driver_id=0, first_name='Rafael', middle_name='Gomes', last_name='Nobre', cc_number='123456789', driver_licence_number='251489558', phone_number='933417044', email='a39267@alunos.isel.pt'}
+Starting SincroserverApplicationTests on DESKTOP-HJ48AFI with PID 6532 (started by darkw in C:\Users\darkw\Documents\PS1920\sincroserver)
+Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+The following profiles are active: dev
+Started SincroserverApplicationTests in 9.611 seconds (JVM running for 11.41)
+get Driver{driver_id=0, first_name='Rafael', middle_name='Gomes', last_name='Nobre', cc_number='123456789', driver_licence_number='251489558', phone_number='933417044', email='a39267@alunos.isel.pt'}
+insert Driver{driver_id=0, first_name='Rafael', middle_name='Gomes', last_name='Nobre', cc_number='123456789', driver_licence_number='251489558', phone_number='933417044', email='a39267@alunos.isel.pt'}
+get Driver{driver_id=0, first_name='', middle_name='', last_name='', cc_number='123456789', driver_licence_number='', phone_number='', email=''}
+get Driver{driver_id=0, first_name='', middle_name='', last_name='', cc_number='', driver_licence_number='251489558', phone_number='', email=''}
+get Driver{driver_id=0, first_name='', middle_name='', last_name='', cc_number='', driver_licence_number='', phone_number='933417044', email=''}
+get Driver{driver_id=0, first_name='', middle_name='', last_name='', cc_number='', driver_licence_number='', phone_number='', email='a39267@alunos.isel.pt'}
+update Driver{driver_id=47, first_name='Rafael', middle_name='Gomes', last_name='Nobre', cc_number='123456789', driver_licence_number='251489558', phone_number='933417044', email='rafael.gomes.nobre@gmail.com'}
+get Driver{driver_id=0, first_name='', middle_name='', last_name='', cc_number='', driver_licence_number='', phone_number='', email='a39267@alunos.isel.pt'}
+get Driver{driver_id=0, first_name='', middle_name='', last_name='', cc_number='', driver_licence_number='', phone_number='', email='rafael.gomes.nobre@gmail.com'}
+delete Driver{driver_id=47, first_name='Rafael', middle_name='Gomes', last_name='Nobre', cc_number='123456789', driver_licence_number='251489558', phone_number='933417044', email='rafael.gomes.nobre@gmail.com'}
+get Driver{driver_id=0, first_name='', middle_name='', last_name='', cc_number='123456789', driver_licence_number='', phone_number='', email=''}
+get Driver{driver_id=0, first_name='', middle_name='', last_name='', cc_number='', driver_licence_number='251489558', phone_number='', email=''}
+get Driver{driver_id=0, first_name='', middle_name='', last_name='', cc_number='', driver_licence_number='', phone_number='933417044', email=''}
+get Driver{driver_id=0, first_name='', middle_name='', last_name='', cc_number='', driver_licence_number='', phone_number='', email='rafael.gomes.nobre@gmail.com'}
+Starting SincroserverApplicationTests on DESKTOP-HJ48AFI with PID 4328 (started by darkw in C:\Users\darkw\Documents\PS1920\sincroserver)
+Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+The following profiles are active: dev
+Started SincroserverApplicationTests in 9.735 seconds (JVM running for 13.244)
+get Driver{driver_id=0, first_name='Rafael', middle_name='Gomes', last_name='Nobre', cc_number='123456789', driver_licence_number='251489558', phone_number='933417044', email='a39267@alunos.isel.pt'}
+insert Driver{driver_id=0, first_name='Rafael', middle_name='Gomes', last_name='Nobre', cc_number='123456789', driver_licence_number='251489558', phone_number='933417044', email='a39267@alunos.isel.pt'}
+get Driver{driver_id=0, first_name='', middle_name='', last_name='', cc_number='123456789', driver_licence_number='', phone_number='', email=''}
+get Driver{driver_id=0, first_name='', middle_name='', last_name='', cc_number='', driver_licence_number='251489558', phone_number='', email=''}
+get Driver{driver_id=0, first_name='', middle_name='', last_name='', cc_number='', driver_licence_number='', phone_number='933417044', email=''}
+get Driver{driver_id=0, first_name='', middle_name='', last_name='', cc_number='', driver_licence_number='', phone_number='', email='a39267@alunos.isel.pt'}
+update Driver{driver_id=48, first_name='Rafael', middle_name='Gomes', last_name='Nobre', cc_number='123456789', driver_licence_number='251489558', phone_number='933417044', email='rafael.gomes.nobre@gmail.com'}
+get Driver{driver_id=0, first_name='', middle_name='', last_name='', cc_number='', driver_licence_number='', phone_number='', email='a39267@alunos.isel.pt'}
+get Driver{driver_id=0, first_name='', middle_name='', last_name='', cc_number='', driver_licence_number='', phone_number='', email='rafael.gomes.nobre@gmail.com'}
+delete Driver{driver_id=48, first_name='Rafael', middle_name='Gomes', last_name='Nobre', cc_number='123456789', driver_licence_number='251489558', phone_number='933417044', email='rafael.gomes.nobre@gmail.com'}
+get all drivers
+Starting SincroserverApplicationTests on DESKTOP-HJ48AFI with PID 14236 (started by darkw in C:\Users\darkw\Documents\PS1920\sincroserver)
+Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+The following profiles are active: dev
+Started SincroserverApplicationTests in 9.706 seconds (JVM running for 13.092)
+get Driver{driver_id=0, first_name='Rafael', middle_name='Gomes', last_name='Nobre', cc_number='123456789', driver_licence_number='251489558', phone_number='933417044', email='a39267@alunos.isel.pt'}
+insert Driver{driver_id=0, first_name='Rafael', middle_name='Gomes', last_name='Nobre', cc_number='123456789', driver_licence_number='251489558', phone_number='933417044', email='a39267@alunos.isel.pt'}
+get Driver{driver_id=0, first_name='', middle_name='', last_name='', cc_number='123456789', driver_licence_number='', phone_number='', email=''}
+get Driver{driver_id=0, first_name='', middle_name='', last_name='', cc_number='', driver_licence_number='251489558', phone_number='', email=''}
+get Driver{driver_id=0, first_name='', middle_name='', last_name='', cc_number='', driver_licence_number='', phone_number='933417044', email=''}
+get Driver{driver_id=0, first_name='', middle_name='', last_name='', cc_number='', driver_licence_number='', phone_number='', email='a39267@alunos.isel.pt'}
+update Driver{driver_id=49, first_name='Rafael', middle_name='Gomes', last_name='Nobre', cc_number='123456789', driver_licence_number='251489558', phone_number='933417044', email='rafael.gomes.nobre@gmail.com'}
+get Driver{driver_id=0, first_name='', middle_name='', last_name='', cc_number='', driver_licence_number='', phone_number='', email='a39267@alunos.isel.pt'}
+get Driver{driver_id=0, first_name='', middle_name='', last_name='', cc_number='', driver_licence_number='', phone_number='', email='rafael.gomes.nobre@gmail.com'}
+delete Driver{driver_id=49, first_name='Rafael', middle_name='Gomes', last_name='Nobre', cc_number='123456789', driver_licence_number='251489558', phone_number='933417044', email='rafael.gomes.nobre@gmail.com'}
+get all drivers
+Starting SincroserverApplicationTests on DESKTOP-HJ48AFI with PID 17068 (started by darkw in C:\Users\darkw\Documents\PS1920\sincroserver)
+Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+The following profiles are active: dev
+Started SincroserverApplicationTests in 9.616 seconds (JVM running for 13.004)
+get Driver{driver_id=0, first_name='Rafael', middle_name='Gomes', last_name='Nobre', cc_number='123456789', driver_licence_number='251489558', phone_number='933417044', email='a39267@alunos.isel.pt'}
+insert Driver{driver_id=0, first_name='Rafael', middle_name='Gomes', last_name='Nobre', cc_number='123456789', driver_licence_number='251489558', phone_number='933417044', email='a39267@alunos.isel.pt'}
+get Driver{driver_id=0, first_name='', middle_name='', last_name='', cc_number='123456789', driver_licence_number='', phone_number='', email=''}
+get Driver{driver_id=0, first_name='', middle_name='', last_name='', cc_number='', driver_licence_number='251489558', phone_number='', email=''}
+get Driver{driver_id=0, first_name='', middle_name='', last_name='', cc_number='', driver_licence_number='', phone_number='933417044', email=''}
+get Driver{driver_id=0, first_name='', middle_name='', last_name='', cc_number='', driver_licence_number='', phone_number='', email='a39267@alunos.isel.pt'}
+update Driver{driver_id=50, first_name='Rafael', middle_name='Gomes', last_name='Nobre', cc_number='123456789', driver_licence_number='251489558', phone_number='933417044', email='rafael.gomes.nobre@gmail.com'}
+get Driver{driver_id=0, first_name='', middle_name='', last_name='', cc_number='', driver_licence_number='', phone_number='', email='a39267@alunos.isel.pt'}
+get Driver{driver_id=0, first_name='', middle_name='', last_name='', cc_number='', driver_licence_number='', phone_number='', email='rafael.gomes.nobre@gmail.com'}
+delete Driver{driver_id=50, first_name='Rafael', middle_name='Gomes', last_name='Nobre', cc_number='123456789', driver_licence_number='251489558', phone_number='933417044', email='rafael.gomes.nobre@gmail.com'}
+get all drivers
+Starting SincroserverApplicationTests on DESKTOP-HJ48AFI with PID 3840 (started by darkw in C:\Users\darkw\Documents\PS1920\sincroserver)
+Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+The following profiles are active: dev
+Started SincroserverApplicationTests in 9.145 seconds (JVM running for 11.049)
+getDriver: com.isel.sincroserver.resources.Query@41092c8
+getDriver: Driver{driver_id=0, first_name='Rafael', middle_name='Gomes', last_name='Nobre', cc_number='123456789', driver_licence_number='251489558', phone_number='933417044', email='a39267@alunos.isel.pt'}
+insertDriver: com.isel.sincroserver.resources.Query@4f571c0e
+insertDriver: Driver{driver_id=0, first_name='Rafael', middle_name='Gomes', last_name='Nobre', cc_number='123456789', driver_licence_number='251489558', phone_number='933417044', email='a39267@alunos.isel.pt'}
+getDriver: com.isel.sincroserver.resources.Query@41092c8
+getDriver: Driver{driver_id=0, first_name='', middle_name='', last_name='', cc_number='123456789', driver_licence_number='', phone_number='', email=''}
+getDriver: com.isel.sincroserver.resources.Query@41092c8
+getDriver: Driver{driver_id=0, first_name='', middle_name='', last_name='', cc_number='', driver_licence_number='251489558', phone_number='', email=''}
+getDriver: com.isel.sincroserver.resources.Query@41092c8
+getDriver: Driver{driver_id=0, first_name='', middle_name='', last_name='', cc_number='', driver_licence_number='', phone_number='933417044', email=''}
+getDriver: com.isel.sincroserver.resources.Query@41092c8
+getDriver: Driver{driver_id=0, first_name='', middle_name='', last_name='', cc_number='', driver_licence_number='', phone_number='', email='a39267@alunos.isel.pt'}
+updateDriver: com.isel.sincroserver.resources.Query@5c6be812
+updateDriver: Driver{driver_id=51, first_name='Rafael', middle_name='Gomes', last_name='Nobre', cc_number='123456789', driver_licence_number='251489558', phone_number='933417044', email='rafael.gomes.nobre@gmail.com'}
+getDriver: com.isel.sincroserver.resources.Query@41092c8
+getDriver: Driver{driver_id=0, first_name='', middle_name='', last_name='', cc_number='', driver_licence_number='', phone_number='', email='a39267@alunos.isel.pt'}
+getDriver: com.isel.sincroserver.resources.Query@41092c8
+getDriver: Driver{driver_id=0, first_name='', middle_name='', last_name='', cc_number='', driver_licence_number='', phone_number='', email='rafael.gomes.nobre@gmail.com'}
+updateDriver: com.isel.sincroserver.resources.Query@5c6be812
+updateDriver: Driver{driver_id=51, first_name='Rafael', middle_name='Gomes', last_name='Nobre', cc_number='123456789', driver_licence_number='251489558', phone_number='933417044', email='rafael.gomes.nobre@gmail.com'}
+Starting SincroserverApplicationTests on DESKTOP-HJ48AFI with PID 3404 (started by darkw in C:\Users\darkw\Documents\PS1920\sincroserver)
+Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+The following profiles are active: dev
+Started SincroserverApplicationTests in 8.865 seconds (JVM running for 10.671)
+getDriver: select * from driver where 1 = 1 and driver_licence_number = :driver_licence_number
+getDriver: Driver{driver_id=0, first_name='Rafael', middle_name='Gomes', last_name='Nobre', cc_number='123456789', driver_licence_number='251489558', phone_number='933417044', email='a39267@alunos.isel.pt'}
+insertDriver: insert into driver (first_name, middle_name, last_name, driver_licence_number, cc_number, phone_number, email) values (:first_name, :middle_name, :last_name, :driver_licence_number, :cc_number, :phone_number, :email)
+insertDriver: Driver{driver_id=0, first_name='Rafael', middle_name='Gomes', last_name='Nobre', cc_number='123456789', driver_licence_number='251489558', phone_number='933417044', email='a39267@alunos.isel.pt'}
+getDriver: select * from driver where 1 = 1 and cc_number = :cc_number
+getDriver: Driver{driver_id=0, first_name='', middle_name='', last_name='', cc_number='123456789', driver_licence_number='', phone_number='', email=''}
+getDriver: select * from driver where 1 = 1 and driver_licence_number = :driver_licence_number
+getDriver: Driver{driver_id=0, first_name='', middle_name='', last_name='', cc_number='', driver_licence_number='251489558', phone_number='', email=''}
+getDriver: select * from driver where 1 = 1 and phone_number = :phone_number
+getDriver: Driver{driver_id=0, first_name='', middle_name='', last_name='', cc_number='', driver_licence_number='', phone_number='933417044', email=''}
+getDriver: select * from driver where 1 = 1 and email = :email
+getDriver: Driver{driver_id=0, first_name='', middle_name='', last_name='', cc_number='', driver_licence_number='', phone_number='', email='a39267@alunos.isel.pt'}
+updateDriver: update driver set first_name = :first_name, middle_name = :middle_name, last_name = :last_name, phone_number = :phone_number, email = :email where 1 = 1 and driver_id = :driver_id
+updateDriver: Driver{driver_id=52, first_name='Rafael', middle_name='Gomes', last_name='Nobre', cc_number='123456789', driver_licence_number='251489558', phone_number='933417044', email='rafael.gomes.nobre@gmail.com'}
+getDriver: select * from driver where 1 = 1 and email = :email
+getDriver: Driver{driver_id=0, first_name='', middle_name='', last_name='', cc_number='', driver_licence_number='', phone_number='', email='a39267@alunos.isel.pt'}
+getDriver: select * from driver where 1 = 1 and email = :email
+getDriver: Driver{driver_id=0, first_name='', middle_name='', last_name='', cc_number='', driver_licence_number='', phone_number='', email='rafael.gomes.nobre@gmail.com'}
+updateDriver: update driver set first_name = :first_name, middle_name = :middle_name, last_name = :last_name, phone_number = :phone_number, email = :email where 1 = 1 and driver_id = :driver_id
+updateDriver: Driver{driver_id=52, first_name='Rafael', middle_name='Gomes', last_name='Nobre', cc_number='123456789', driver_licence_number='251489558', phone_number='933417044', email='rafael.gomes.nobre@gmail.com'}
+Starting SincroserverApplicationTests on DESKTOP-HJ48AFI with PID 4668 (started by darkw in C:\Users\darkw\Documents\PS1920\sincroserver)
+Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+The following profiles are active: dev
+Started SincroserverApplicationTests in 9.124 seconds (JVM running for 10.914)
+getDriver: select * from driver where 1 = 1 and driver_licence_number = :driver_licence_number
+getDriver: Driver{driver_id=0, first_name='Rafael', middle_name='Gomes', last_name='Nobre', cc_number='123456789', driver_licence_number='251489558', phone_number='933417044', email='a39267@alunos.isel.pt'}
+insertDriver: insert into driver (first_name, middle_name, last_name, driver_licence_number, cc_number, phone_number, email) values (:first_name, :middle_name, :last_name, :driver_licence_number, :cc_number, :phone_number, :email)
+insertDriver: Driver{driver_id=0, first_name='Rafael', middle_name='Gomes', last_name='Nobre', cc_number='123456789', driver_licence_number='251489558', phone_number='933417044', email='a39267@alunos.isel.pt'}
+getDriver: select * from driver where 1 = 1 and cc_number = :cc_number
+getDriver: Driver{driver_id=0, first_name='', middle_name='', last_name='', cc_number='123456789', driver_licence_number='', phone_number='', email=''}
+getDriver: select * from driver where 1 = 1 and driver_licence_number = :driver_licence_number
+getDriver: Driver{driver_id=0, first_name='', middle_name='', last_name='', cc_number='', driver_licence_number='251489558', phone_number='', email=''}
+getDriver: select * from driver where 1 = 1 and phone_number = :phone_number
+getDriver: Driver{driver_id=0, first_name='', middle_name='', last_name='', cc_number='', driver_licence_number='', phone_number='933417044', email=''}
+getDriver: select * from driver where 1 = 1 and email = :email
+getDriver: Driver{driver_id=0, first_name='', middle_name='', last_name='', cc_number='', driver_licence_number='', phone_number='', email='a39267@alunos.isel.pt'}
+updateDriver: update driver set first_name = :first_name, middle_name = :middle_name, last_name = :last_name, phone_number = :phone_number, email = :email where 1 = 1 and driver_id = :driver_id
+updateDriver: Driver{driver_id=53, first_name='Rafael', middle_name='Gomes', last_name='Nobre', cc_number='123456789', driver_licence_number='251489558', phone_number='933417044', email='rafael.gomes.nobre@gmail.com'}
+getDriver: select * from driver where 1 = 1 and email = :email
+getDriver: Driver{driver_id=0, first_name='', middle_name='', last_name='', cc_number='', driver_licence_number='', phone_number='', email='a39267@alunos.isel.pt'}
+getDriver: select * from driver where 1 = 1 and email = :email
+getDriver: Driver{driver_id=0, first_name='', middle_name='', last_name='', cc_number='', driver_licence_number='', phone_number='', email='rafael.gomes.nobre@gmail.com'}
+deleteDriver: delete from driver where 1 = 1 and driver_id = :driver_id
+deleteDriver: Driver{driver_id=53, first_name='Rafael', middle_name='Gomes', last_name='Nobre', cc_number='123456789', driver_licence_number='251489558', phone_number='933417044', email='rafael.gomes.nobre@gmail.com'}
+getDrivers: select * from driver where 1 = 1

@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" build-on-make="true" name="sincroserver:Web exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/sincroserver_Web_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="sincroserver/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="sincroserver" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>
