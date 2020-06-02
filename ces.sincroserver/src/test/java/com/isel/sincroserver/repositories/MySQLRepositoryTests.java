@@ -1,6 +1,6 @@
 package com.isel.sincroserver.repositories;
 
-import com.isel.sincroserver.entities.Driver;
+import com.isel.sincroserver.entities.Citizen;
 import com.isel.sincroserver.exception.SincroServerException;
 import com.isel.sincroserver.interfaces.repositories.Repository;
 import com.isel.sincroserver.interfaces.resources.Resources;
@@ -26,19 +26,6 @@ public class MySQLRepositoryTests {
     @Qualifier("FileResources")
     Resources resources;
 
-    Driver referenceDriver;
-
-    {
-        referenceDriver = new Driver(0,
-                                     "Rafael",
-                                     "Gomes",
-                                     "Nobre",
-                                     "123456789",
-                                     "251489558",
-                                     "933417044",
-                                     "a39267@alunos.isel.pt");
-    }
-
     @Test
     void contextLoads() {
         Assertions.assertNotNull(repository);
@@ -51,64 +38,49 @@ public class MySQLRepositoryTests {
     }
 
     @Test
-    void testRepositoryDriverOps() throws SincroServerException {
-        Assertions.assertNull(referenceDriver.getDriver(repository));
-
-        Assertions.assertEquals(1, referenceDriver.insertDriver(repository));
-
-        Driver dr1 = new Driver(0,
-                "",
-                "",
-                "",
+    void testRepositoryCitizenOps() throws SincroServerException {
+        Citizen citizen1 = new Citizen(0,
+                "Rafael",
+                "Gomes",
+                "Nobre",
                 "123456789",
-                "",
-                "",
-                "");
-
-        Driver dr2 = new Driver(0,
-                "",
-                "",
-                "",
-                "",
                 "251489558",
-                "",
-                "");
-
-        Driver dr3 = new Driver(0,
-                "",
-                "",
-                "",
-                "",
-                "",
                 "933417044",
-                "");
-
-        Driver dr4 = new Driver(0,
-                "",
-                "",
-                "",
-                "",
-                "",
-                "",
                 "a39267@alunos.isel.pt");
 
-        Assertions.assertEquals(referenceDriver, dr1.getDriver(repository));
-        Assertions.assertEquals(referenceDriver, dr2.getDriver(repository));
-        Assertions.assertEquals(referenceDriver, dr3.getDriver(repository));
-        Assertions.assertEquals(referenceDriver, dr4.getDriver(repository));
+        Citizen citizen2 = new Citizen(0,
+                "Pedro",
+                "Miguel",
+                "Santos",
+                "234567891",
+                "198765432",
+                "911111111",
+                "11111@gmail.com");
 
-        referenceDriver.setEmail("rafael.gomes.nobre@gmail.com");
+        Assertions.assertNull(repository.getCitizen(citizen1.getCc_number()));
 
-        Assertions.assertEquals(1, referenceDriver.updateDriver(repository));
+        Assertions.assertEquals(1, repository.insertCitizen(citizen1));
 
-        Assertions.assertNull(dr4.getDriver(repository));
+        Assertions.assertEquals(citizen1, repository.getCitizen(citizen1.getCc_number()));
 
-        dr4.setEmail("rafael.gomes.nobre@gmail.com");
+        citizen1.setEmail("rafael.gomes.nobre@gmail.com");
 
-        Assertions.assertEquals(referenceDriver, dr4.getDriver(repository));
+        Assertions.assertEquals(1, repository.updateCitizenEmail(citizen1.getCc_number(), citizen1.getEmail()));
 
-        Assertions.assertEquals(1, referenceDriver.deleteDriver(repository));
+        Assertions.assertEquals(citizen1.getEmail(), repository.getCitizen(citizen1.getCc_number()).getEmail());
 
-        Assertions.assertEquals(List.of(), Driver.getDrivers(repository));
+        citizen1.setPhone_number("966666666");
+
+        Assertions.assertEquals(1, repository.updateCitizenPhoneNumber(citizen1.getCc_number(), citizen1.getPhone_number()));
+
+        Assertions.assertEquals(citizen1.getPhone_number(), repository.getCitizen(citizen1.getCc_number()).getPhone_number());
+
+        Assertions.assertEquals(1, repository.insertCitizen(citizen2));
+
+        Assertions.assertEquals(2, repository.getCitizens().size());
+
+        Assertions.assertEquals(1, repository.deleteCitizen(citizen2.getCc_number()));
+
+        Assertions.assertEquals(1, repository.deleteCitizen(citizen1.getCc_number()));
     }
 }

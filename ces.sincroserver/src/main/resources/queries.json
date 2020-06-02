@@ -1,38 +1,456 @@
 {
-  "insertDriver" : {
-    "query": "insert into driver (first_name, middle_name, last_name, driver_licence_number, cc_number, phone_number, email) values (:first_name, :middle_name, :last_name, :driver_licence_number, :cc_number, :phone_number, :email)",
-    "parameters": {},
-    "where" : ""
-  },
-  "getDriver": {
-    "query" : "select * from driver where 1 = 1",
-    "parameters" : {
-      "driver_id" : " and driver_id = :driver_id",
-      "cc_number" : " and cc_number = :cc_number",
-      "driver_licence_number" : " and driver_licence_number = :driver_licence_number",
-      "phone_number" : " and phone_number = :phone_number",
-      "email" : " and email = :email"
-    },
-    "where" : ""
-  },
-  "updateDriver" : {
-    "query": "update driver set first_name = :first_name, middle_name = :middle_name, last_name = :last_name, phone_number = :phone_number, email = :email where 1 = 1",
-    "parameters": {
-      "driver_id" : " and driver_id = :driver_id",
-      "cc_number" : " and cc_number = :cc_number",
-      "driver_licence_number" : " and driver_licence_number = :driver_licence_number"
-    },
-    "where" : ""
-  },
-  "deleteDriver": {
-    "query" : "delete from driver where 1 = 1",
-    "parameters" : {
-      "driver_id" : " and driver_id = :driver_id",
-      "cc_number" : " and cc_number = :cc_number",
-      "driver_licence_number" : " and driver_licence_number = :driver_licence_number",
-      "phone_number" : " and phone_number = :phone_number",
-      "email" : " and email = :email"
-    },
-    "where" : ""
-  }
+  "insertCitizen" : [
+    "insert into citizen (first_name, middle_name, last_name, driver_licence_number, cc_number, phone_number, email) ",
+    "values (:first_name, :middle_name, :last_name, :driver_licence_number, :cc_number, :phone_number, :email)"
+  ],
+  "deleteCitizen" : [
+    "delete from citizen where 1 = 1 and cc_number = :cc_number"
+  ],
+  "updateCitizenEmail" : [
+    "update citizen ",
+    "set email = :email ",
+    "where 1 = 1 ",
+    "and cc_number = :cc_number"
+  ],
+  "updateCitizenPhoneNumber" : [
+    "update citizen ",
+    "set phone_number = :phone_number ",
+    "where 1 = 1 ",
+    "and cc_number = :cc_number"
+  ],
+  "getCitizen" : [
+    "select * from citizen where 1 = 1 and cc_number = :cc_number"
+  ],
+  "getCitizens" : [
+    "select * from citizen"
+  ],
+  "getVehicleCitizens" : [
+    "select c.* ",
+    "from citizen c, ",
+    "vehicle_owner vo ",
+    "where 1 = 1 ",
+    "and vo.licence_plate = :licence_plate ",
+    "and vo.cc_number = c.cc_number ",
+    "union ",
+    "select c.* ",
+    "from citizen c, ",
+    "vehicle_driver vd ",
+    "where 1 = 1 ",
+    "and vd.licence_plate = :licence_plate ",
+    "and vd.cc_number = c.cc_number "
+  ],
+  "getVehicleOwnerCitizens"  : [
+    "select c.* ",
+    "from citizen c, ",
+    "vehicle_owner vo ",
+    "where 1 = 1 ",
+    "and vo.licence_plate = :licence_plate ",
+    "and vo.cc_number = c.cc_number "
+  ],
+  "getVehicleDriverCitizens"  : [
+    "select c.* ",
+    "from citizen c, ",
+    "vehicle_driver vd ",
+    "where 1 = 1 ",
+    "and vd.licence_plate = :licence_plate ",
+    "and vd.cc_number = c.cc_number "
+  ],
+  "insertUser" : [
+    "insert into user (username, pwd, cc_number) ",
+    "values (:username, :pwd, :cc_number)"
+  ],
+  "deleteUser" : [
+    "delete from user ",
+    "where 1 = 1 ",
+    "and username = :username"
+  ],
+  "updateUserPassword" : [
+    "update user ",
+    "set password = :password ",
+    "where 1 = 1 ",
+    "and username = :username "
+  ],
+  "getUser" : [
+    "select * ",
+    "from user ",
+    "where 1 = 1 ",
+    "and username = :username"
+  ],
+  "getCitizenUser" : [
+    "select * ",
+    "from user ",
+    "where 1 = 1 ",
+    "and cc_number = :cc_number"
+  ],
+  "insertVehicle" : [
+    "insert into vehicle (licence_plate, make, model, vehicle_date, category) ",
+    "values (:licence_plate, :make, :model, :vehicle_date, :category)"
+  ],
+  "deleteVehicle" : [
+    "delete from vehicle ",
+    "where 1 = 1 ",
+    "and licence_plate = :licence_plate"
+  ],
+  "getVehicle" : [
+    "select * ",
+    "from vehicle ",
+    "where 1 = 1 ",
+    "and licence_plate = :licence_plate"
+  ],
+  "getVehicles" : [
+    "select * ",
+    "from vehicle "
+  ],
+  "getCitizenVehicles" : [
+    "select v.* ",
+    "from vehicle_owner vo, ",
+    "vehicle v ",
+    "where 1 = 1 ",
+    "and vo.cc_number = :cc_number ",
+    "and v.licence_plate = vo.licence_plate ",
+    "union ",
+    "select v.* ",
+    "from vehicle_driver vd, ",
+    "vehicle v ",
+    "where 1 = 1 ",
+    "and vd.cc_number = :cc_number ",
+    "and v.licence_plate = vd.licence_plate "
+  ],
+  "getCitizenOwnedVehicles" : [
+    "select v.* ",
+    "from vehicle_owner vo, ",
+    "vehicle v ",
+    "where 1 = 1 ",
+    "and vo.cc_number = :cc_number ",
+    "and v.licence_plate = vo.licence_plate "
+  ],
+  "getCitizenDrivenVehicles" : [
+    "select v.* ",
+    "from vehicle_driver vd, ",
+    "vehicle v ",
+    "where 1 = 1 ",
+    "and vd.cc_number = :cc_number ",
+    "and v.licence_plate = vd.licence_plate "
+  ],
+  "insertVehicleAuthorization" : [
+    "insert into vehicle_authorization (cc_number_owner, cc_number_driver, licence_plate, _active, authorization_start, authorization_end) ",
+    "values (:cc_number_owner, :cc_number_driver, :licence_plate, 1, :authorization_start, null)"
+  ],
+  "endVehicleAuthorization" : [
+    "update vehicle_authorization ",
+    "set _active = 0, ",
+    "authorization_end = :authorization_end ",
+    "where 1 = 1 ",
+    "and cc_number_owner = :cc_number_owner ",
+    "and cc_number_driver = :cc_number_driver ",
+    "and licence_plate = :licence_plate "
+  ],
+  "getVehicleAuthorization" : [
+    "select * ",
+    "from vehicle_authorization ",
+    "where 1 = 1 ",
+    "and cc_number_owner = :cc_number_owner ",
+    "and cc_number_driver = :cc_number_driver ",
+    "and licence_plate = :licence_plate "
+  ],
+  "getCitizenGrantedVehicleAuthorizations" : [
+    "select * ",
+    "from vehicle_authorization ",
+    "where 1 = 1 ",
+    "and cc_number_owner = :cc_number_owner "
+  ],
+  "getCitizenGivenVehicleAuthorizations" : [
+    "select * ",
+    "from vehicle_authorization ",
+    "where 1 = 1 ",
+    "and cc_number_driver = :cc_number_driver "
+  ],
+  "insertVehicleOwner" : [
+    "insert into vehicle_owner (cc_number, licence_plate, _active, ownership_start, ownership_end) ",
+    "values (:cc_number, :licence_plate, 1, :ownership_start, null)"
+  ],
+  "endVehicleOwnership" : [
+    "update vehicle_owner ",
+    "set _active = 0, ",
+    "ownership_end = :ownership_end ",
+    "where 1 = 1 ",
+    "and cc_number = :cc_number ",
+    "and licence_plate = :licence_plate "
+  ],
+  "getVehicleOwner" : [
+    "select * ",
+    "from vehicle_owner ",
+    "where 1 = 1 ",
+    "and cc_number = :cc_number ",
+    "and licence_plate = :licence_plate "
+  ],
+  "insertVehicleDriver" : [
+    "insert into vehicle_driver (cc_number, licence_plate, _active, driving_start, driving_end) ",
+    "values (:cc_number, :licence_plate, 1, :driving_start, null)"
+  ],
+  "endVehicleDriving" : [
+    "update vehicle_driver ",
+    "set _active = 0, ",
+    "driving_end = :driving_end ",
+    "where 1 = 1 ",
+    "and cc_number = :cc_number ",
+    "and licence_plate = :licence_plate "
+  ],
+  "getVehicleDriver" : [
+    "select * ",
+    "from vehicle_driver ",
+    "where 1 = 1 ",
+    "and cc_number = :cc_number ",
+    "and licence_plate = :licence_plate "
+  ],
+  "insertInfraction" : [
+    "insert into infraction (licence_plate, radar_id, infraction_date_time, price, paid, payment_date_time) ",
+    "values (:licence_plate, :radar_id, :infraction_date_time, :price, 0, null)"
+  ],
+  "updateInfractionPayment" : [
+    "update infraction ",
+    "set paid = 1, ",
+    "payment_date_time = :payment_date_time ",
+    "where 1 = 1 ",
+    "and infraction_id = :infraction_id "
+  ],
+  "getInfraction" : [
+    "select * ",
+    "from infraction ",
+    "where 1 = 1 ",
+    "and infraction_id = :infraction_id "
+  ],
+  "getInfractions" : [
+    "select * ",
+    "from infraction "
+  ],
+  "getInfractionType" : [
+    "select 1 as infraction_type ",
+    "from infraction i, ",
+    "speed_infraction si ",
+    "where 1 = 1 ",
+    "and i.infraction_id = :infraction_id ",
+    "and si.infraction_id = i.infraction_id ",
+    "union ",
+    "select 2 as infraction_type ",
+    "from infraction i, ",
+    "red_light_infraction rli ",
+    "where 1 = 1 ",
+    "and i.infraction_id = :infraction_id ",
+    "and rli.infraction_id = i.infraction_id ",
+    "union ",
+    "select 3 as infraction_type ",
+    "from infraction i, ",
+    "distance_infraction di ",
+    "where 1 = 1 ",
+    "and i.infraction_id = :infraction_id ",
+    "and di.infraction_id = i.infraction_id "
+  ],
+  "getVehicleInfractions" : [
+    "select i.* ",
+    "from infraction ",
+    "where 1 = 1 ",
+    "and licence_plate = :licence_plate"
+  ],
+  "getRadarAndVehicleInfractions" : [
+    "select * ",
+    "from infraction ",
+    "where 1 = 1 ",
+    "and licence_plate = :licence_plate ",
+    "and radar_id = :radar_id"
+  ],
+  "insertRedLightInfraction" : [
+    "insert into red_light_infraction (infraction_id, vehicle_speed, elapsed_time, yellow_duration) ",
+    "values (:infraction_id, :vehicle_speed, :elapsed_time, :yellow_duration)"
+  ],
+  "getRedLightInfraction" : [
+    "select i.*, rli.* ",
+    "from infraction i, ",
+    "red_light_infraction rli ",
+    "where 1 = 1 ",
+    "and i.infraction_id = :infraction_id ",
+    "and rli.infraction_id = i.infraction_id "
+  ],
+  "getRedLightInfractions" : [
+    "select i.*, rli.* ",
+    "from infraction i, ",
+    "red_light_infraction rli ",
+    "where 1 = 1 ",
+    "and rli.infraction_id = i.infraction_id "
+  ],
+  "getVehicleRedLightInfractions" : [
+    "select i.*, rli.* ",
+    "from infraction i, ",
+    "red_light_infraction rli ",
+    "where 1 = 1 ",
+    "and i.licence_plate = :licence_plate ",
+    "and rli.infraction_id = i.infraction_id "
+  ],
+  "getRadarAndVehicleRedLightInfractions" : [
+    "select i.*, rli.* ",
+    "from infraction i, ",
+    "red_light_infraction rli ",
+    "where 1 = 1 ",
+    "and i.licence_plate = :licence_plate ",
+    "and i.radar_id = :radar_id ",
+    "and rli.infraction_id = i.infraction_id "
+  ],
+  "insertSpeedInfraction" : [
+    "insert into speed_infraction (infraction_id, vehicle_speed, speed_limit, direction, chasing_vehicle_speed) ",
+    "values (:infraction_id, :vehicle_speed, :speed_limit, :direction, :chasing_vehicle_speed)"
+  ],
+  "getSpeedInfraction" : [
+    "select i.*, si.* ",
+    "from infraction i, ",
+    "speed_infraction si ",
+    "where 1 = 1 ",
+    "and i.infraction_id = :infraction_id ",
+    "and si.infraction_id = i.infraction_id "
+  ],
+  "getSpeedInfractions" : [
+    "select i.*, si.* ",
+    "from infraction i, ",
+    "speed_infraction si ",
+    "where 1 = 1 ",
+    "and si.infraction_id = i.infraction_id "
+  ],
+  "getVehicleSpeedInfractions" : [
+    "select i.*, si.* ",
+    "from infraction i, ",
+    "speed_infraction si ",
+    "where 1 = 1 ",
+    "and i.licence_plate = :licence_plate ",
+    "and si.infraction_id = i.infraction_id "
+  ],
+  "getRadarAndVehicleSpeedInfractions" : [
+    "select i.*, si.* ",
+    "from infraction i, ",
+    "speed_infraction si ",
+    "where 1 = 1 ",
+    "and i.licence_plate = :licence_plate ",
+    "and i.radar_id = :radar_id ",
+    "and si.infraction_id = i.infraction_id "
+  ],
+  "insertDistanceInfraction" : [
+    "insert into distance_infraction (infraction_id, distance_to_next_vehicle, distance_limit) ",
+    "values (:infraction_id, :vehicle_speed, :distance_to_next_vehicle, :distance_limit)"
+  ],
+  "getDistanceInfraction" : [
+    "select i.*, di.* ",
+    "from infraction i, ",
+    "distance_infraction di ",
+    "where 1 = 1 ",
+    "and i.infraction_id = :infraction_id ",
+    "and di.infraction_id = i.infraction_id "
+  ],
+  "getDistanceInfractions" : [
+    "select i.*, di.* ",
+    "from infraction i, ",
+    "distance_infraction di ",
+    "where 1 = 1 ",
+    "and di.infraction_id = i.infraction_id "
+  ],
+  "getVehicleDistanceInfractions" : [
+    "select i.*, di.* ",
+    "from infraction i, ",
+    "distance_infraction di ",
+    "where 1 = 1 ",
+    "and i.licence_plate = :licence_plate ",
+    "and di.infraction_id = i.infraction_id "
+  ],
+  "getRadarAndVehicleDistanceInfractions" : [
+    "select i.*, di.* ",
+    "from infraction i, ",
+    "distance_infraction di ",
+    "where 1 = 1 ",
+    "and i.licence_plate = :licence_plate ",
+    "and i.radar_id = :radar_id ",
+    "and di.infraction_id = i.infraction_id "
+  ],
+  "insertNotification" : [
+    "insert into notification (infraction_id, cc_number, notified, notification_time) ",
+    "values (:infraction_id, :cc_number, 0, null) "
+  ],
+  "deleteNotification" : [
+    "delete from notification ",
+    "where 1 = 1 ",
+    "and infraction_id = :infraction_id ",
+    "and cc_number = :cc_number "
+  ],
+  "updateNotification" : [
+    "update notification ",
+    "set notified = 1, ",
+    "notification_time = :notification_time ",
+    "where 1 = 1 ",
+    "and infraction_id = :infraction_id ",
+    "and cc_number = :cc_number "
+  ],
+  "getNotification" : [
+    "select * ",
+    "from notification ",
+    "where 1 = 1 ",
+    "and infraction_id = :infraction_id ",
+    "and cc_number = :cc_number "
+  ],
+  "getNotifications" : [
+    "select * ",
+    "from notification "
+  ],
+  "getInfractionNotifications" : [
+    "select * ",
+    "from notification ",
+    "where 1 = 1 ",
+    "and infraction_id = :infraction_id "
+  ],
+  "getInfractionToNotifyNotifications" : [
+    "select * ",
+    "from notification ",
+    "where 1 = 1 ",
+    "and infraction_id = :infraction_id ",
+    "and notified = 0 "
+  ],
+  "getCitizenNotifications" : [
+    "select * ",
+    "from notification ",
+    "where 1 = 1 ",
+    "and cc_number = :cc_number "
+  ],
+  "getCitizenToNotifyNotifications" : [
+    "select * ",
+    "from notification ",
+    "where 1 = 1 ",
+    "and cc_number = :cc_number ",
+    "and notify = 0"
+  ],
+  "getVehicleNotifications" : [
+    "select n.* ",
+    "from notification n, ",
+    "infraction i ",
+    "where 1 = 1 ",
+    "and i.infraction_id = n.infraction_id ",
+    "and i.licence_plate = :licence_plate "
+  ],
+  "getVehicleToNotifyNotifications" : [
+    "select n.* ",
+    "from notification n, ",
+    "infraction i ",
+    "where 1 = 1 ",
+    "and i.notified = 0 ",
+    "and i.infraction_id = n.infraction_id ",
+    "and i.licence_plate = :licence_plate "
+  ],
+  "insertRadar" : [
+    "insert into radar (latitude, longitude, address, kilometer, direction) ",
+    "values (:latitude, :longitude, :address, :kilometer, :direction) "
+  ],
+  "getRadar" : [
+    "select * ",
+    "from radar ",
+    "where 1 = 1 ",
+    "and radar_id = :radar_id"
+  ],
+  "getRadars" : [
+    "select * ",
+    "from radar "
+  ]
 }

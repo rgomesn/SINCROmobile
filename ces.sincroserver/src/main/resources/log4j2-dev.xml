@@ -10,6 +10,7 @@
             <Policies>
                 <SizeBasedTriggeringPolicy size="10MB" />
             </Policies>
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
         </RollingFile>
     </Appenders>
     <Loggers>

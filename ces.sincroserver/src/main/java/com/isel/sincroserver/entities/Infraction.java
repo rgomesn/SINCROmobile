@@ -4,12 +4,32 @@ import java.util.Date;
 
 public class Infraction {
     long infraction_id;
-    long vehicle_driver;
+    String licence_plate;
     long radar_id;
-    Date infraction_timestamp;
+    Date infraction_date_time;
     double price;
     boolean paid;
-    Date last_updated;
+    Date payment_date_time;
+
+    public Infraction() {
+
+    }
+
+    public Infraction(long infraction_id,
+                      String licence_plate,
+                      long radar_id,
+                      Date infraction_date_time,
+                      double price,
+                      boolean paid,
+                      Date payment_date_time) {
+        this.infraction_id = infraction_id;
+        this.licence_plate = licence_plate;
+        this.radar_id = radar_id;
+        this.infraction_date_time = infraction_date_time;
+        this.price = price;
+        this.paid = paid;
+        this.payment_date_time = payment_date_time;
+    }
 
     public long getInfraction_id() {
         return infraction_id;
@@ -19,12 +39,12 @@ public class Infraction {
         this.infraction_id = infraction_id;
     }
 
-    public long getVehicle_driver() {
-        return vehicle_driver;
+    public String getLicence_plate() {
+        return licence_plate;
     }
 
-    public void setVehicle_driver(long vehicle_driver) {
-        this.vehicle_driver = vehicle_driver;
+    public void setLicence_plate(String licence_plate) {
+        this.licence_plate = licence_plate;
     }
 
     public long getRadar_id() {
@@ -35,12 +55,12 @@ public class Infraction {
         this.radar_id = radar_id;
     }
 
-    public Date getInfraction_timestamp() {
-        return infraction_timestamp;
+    public Date getInfraction_date_time() {
+        return infraction_date_time;
     }
 
-    public void setInfraction_timestamp(Date infraction_timestamp) {
-        this.infraction_timestamp = infraction_timestamp;
+    public void setInfraction_date_time(Date infraction_date_time) {
+        this.infraction_date_time = infraction_date_time;
     }
 
     public double getPrice() {
@@ -59,11 +79,11 @@ public class Infraction {
         this.paid = paid;
     }
 
-    public Date getLast_updated() {
-        return last_updated;
+    public Date getPayment_date_time() {
+        return payment_date_time;
     }
 
-    public void setLast_updated(Date last_updated) {
-        this.last_updated = last_updated;
+    public void setPayment_date_time(Date payment_date_time) {
+        this.payment_date_time = payment_date_time;
     }
 }

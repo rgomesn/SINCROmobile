@@ -13,6 +13,14 @@ create table citizen (
     email varchar(50) default null
 );
 
+create table user (
+	username varchar(20) primary key,
+    pwd varchar(20) not null,
+    cc_number varchar(9) not null,
+    foreign key (cc_number)
+        references citizen (cc_number)
+);
+
 create table vehicle (
     vehicle_id bigint not null auto_increment unique key,
     licence_plate varchar(10) primary key,
@@ -65,7 +73,9 @@ create table vehicle_driver (
 	vehicle_driver_id bigint not null unique key auto_increment,
     cc_number varchar(9),
     licence_plate varchar(8),
-    vehicle_owner bool not null,
+    _active boolean not null,
+    driving_start date not null,
+    driving_end date not null,
     primary key (cc_number, licence_plate),
     foreign key (cc_number)
         references citizen (cc_number),
@@ -129,7 +139,7 @@ create table notification (
     infraction_id bigint,
     cc_number varchar(9),
     notified boolean not null,
-    notification timestamp not null,
+    notification_time timestamp not null,
     primary key (infraction_id, cc_number),
     foreign key (infraction_id)
 		references infraction (infraction_id),

@@ -1,6 +1,7 @@
 package com.isel.sincroserver.resources;
 
 import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.JavaType;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.isel.sincroserver.exception.SincroServerException;
 import com.isel.sincroserver.exception.SincroServerExceptionType;
@@ -13,10 +14,8 @@ import org.springframework.stereotype.Component;
 import java.io.*;
 import java.net.URISyntaxException;
 import java.net.URL;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Properties;
+import java.util.*;
+import java.util.stream.Collectors;
 
 @Component
 @Qualifier("FileResources")
@@ -24,7 +23,7 @@ public class FileResources implements Resources {
     private static final Logger logger = LogManager.getLogger(FileResources.class);
     private Resource messages = new Resource("messages.properties", null, null),
             errorMessages = new Resource("errorMessages.properties", null, null),
-            queries = new Resource("queries.json", null, Query.class);
+            queries = new Resource("queries.json", null, null);
     private HashMap<String, Object> resourcesCache = new HashMap<String, Object>();
 
     @Override
@@ -38,8 +37,8 @@ public class FileResources implements Resources {
     }
 
     @Override
-    public Query getQuery(String queryId) throws SincroServerException {
-        return (Query) getJSONResource(queryId, queries);
+    public String getQuery(String queryId) throws SincroServerException {
+        return String.join("", this.<List<String>>getJSONResource(queryId, queries));
     }
 
     private InputStream getResource(Resource resource) throws FileNotFoundException, URISyntaxException {
@@ -93,6 +92,7 @@ public class FileResources implements Resources {
 
             if (is != null) {
                 ObjectMapper om = new ObjectMapper();
+                //JavaType type = om.getTypeFactory().constructParametricType(HashMap.class, String.class, T);
                 Map<String, T> map = om.readValue(is, new TypeReference<Map<String, T>>(){});
                 resourcesCache.putAll(map);
             }

@@ -2,56 +2,198 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="18c29821-2154-4665-93e7-626fba2e0fd8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/application-dev.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/application-prod.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/isel/sincroserver/resources/FileRepositoryTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_jsonwebtoken_jjwt_0_9_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_base_15_ea_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_base_win_15_ea_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_support_5_2_4_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/isel/sincroserver/config/JwtAuthenticationEntryPoint.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/isel/sincroserver/config/JwtRequestFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/isel/sincroserver/config/JwtTokenUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/isel/sincroserver/config/JwtUserDetailsService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/isel/sincroserver/config/SecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/isel/sincroserver/controllers/AuthenticationController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/isel/sincroserver/controllers/RegistrationController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/isel/sincroserver/entities/Citizen.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/isel/sincroserver/entities/DistanceInfraction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/isel/sincroserver/entities/Notification.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/isel/sincroserver/entities/RedLightInfraction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/isel/sincroserver/entities/SpeedInfraction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/isel/sincroserver/entities/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/isel/sincroserver/entities/VehicleAuthorization.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/isel/sincroserver/entities/VehicleOwner.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/isel/sincroserver/external/DummyExternalCitizenDataProvider.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/isel/sincroserver/interfaces/external/ExternalCitizenDataProvider.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/isel/sincroserver/repositories/Constants.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/isel/sincroserver/services/EmailService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/isel/sincroserver/services/MySQLService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/isel/sincroserver/services/RegistrationService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/citizens.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Definição Global.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MagicDraw/SINCROapp/SINCROapp.mdzip" beforeDir="false" afterPath="$PROJECT_DIR$/../MagicDraw/SINCROapp/SINCROapp.mdzip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MagicDraw/SINCROapp/SINCROapp.mdzip.bak" beforeDir="false" afterPath="$PROJECT_DIR$/../MagicDraw/SINCROapp/SINCROapp.mdzip.bak" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Modelo relacional.mwb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Modelo relacional.mwb.bak" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Modelo relacional.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proposta de Projeto - 39267.doc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proposta de Projeto - 39267.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proposta de Projeto - 39267.odt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proposta de Projeto - 39267.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Registo.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Relatorio de progresso - G42.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Requisitos Funcionais - Administração.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Requisitos Funcionais - Consulta.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Requisitos Funcionais - Definições.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Requisitos Funcionais - Eventos de Trânsito.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reuisitos Funcionais - nivel 0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SINCROmobile-modelo entidade-relação.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SINCROmobile-modelo entidade-relação.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_stephenc_jcip_jcip_annotations_1_0_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_googlecode_json_simple_json_simple_1_1_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_nimbusds_lang_tag_1_4_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_nimbusds_nimbus_jose_jwt_7_8_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_nimbusds_oauth2_oidc_sdk_6_14.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__de_codecentric_spring_boot_admin_client_2_2_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__de_codecentric_spring_boot_admin_server_2_2_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__de_codecentric_spring_boot_admin_server_cloud_2_2_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__de_codecentric_spring_boot_admin_server_ui_2_2_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__de_codecentric_spring_boot_admin_starter_client_2_2_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__de_codecentric_spring_boot_admin_starter_server_2_2_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_buffer_4_1_45_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_codec_4_1_45_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_codec_http2_4_1_45_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_codec_http_4_1_45_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_codec_socks_4_1_45_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_common_4_1_45_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_handler_4_1_45_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_handler_proxy_4_1_45_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_resolver_4_1_45_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_transport_4_1_45_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_transport_native_epoll_linux_x86_64_4_1_45_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_transport_native_unix_common_4_1_45_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_projectreactor_addons_reactor_extra_3_3_2_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_projectreactor_netty_reactor_netty_0_9_5_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_projectreactor_reactor_core_3_3_3_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_jakarta_el_3_0_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jolokia_jolokia_core_1_6_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_reactivestreams_reactive_streams_1_0_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_oauth2_client_2_2_5_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_oauth2_resource_server_2_2_5_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_reactor_netty_2_2_5_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_webflux_2_2_5_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_mail_2_2_5_RELEASE.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_oauth2_client_5_2_2_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_oauth2_core_5_2_2_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_oauth2_jose_5_2_2_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_oauth2_resource_server_5_2_2_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webflux_5_2_4_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_synchronoss_cloud_nio_multipart_parser_1_1_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_synchronoss_cloud_nio_stream_storage_1_1_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/dev/app.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/prod/app.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/sincroserver_Web_exploded/WEB-INF/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/sincroserver_Web_exploded/WEB-INF/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/sincroserver_Web_exploded/WEB-INF/classes/com/isel/sincroserver/SincroserverApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/sincroserver_Web_exploded/WEB-INF/classes/com/isel/sincroserver/SincroserverApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/sincroserver_Web_exploded/WEB-INF/classes/com/isel/sincroserver/controllers/SincroAppController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/sincroserver_Web_exploded/WEB-INF/classes/com/isel/sincroserver/controllers/SincroAppController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/sincroserver_Web_exploded/WEB-INF/classes/com/isel/sincroserver/entities/Infraction.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/sincroserver_Web_exploded/WEB-INF/classes/com/isel/sincroserver/entities/Infraction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/sincroserver_Web_exploded/WEB-INF/classes/com/isel/sincroserver/entities/Radar.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/sincroserver_Web_exploded/WEB-INF/classes/com/isel/sincroserver/entities/Radar.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/sincroserver_Web_exploded/WEB-INF/classes/com/isel/sincroserver/entities/Vehicle.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/sincroserver_Web_exploded/WEB-INF/classes/com/isel/sincroserver/entities/Vehicle.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/sincroserver_Web_exploded/WEB-INF/classes/com/isel/sincroserver/entities/VehicleDriver.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/sincroserver_Web_exploded/WEB-INF/classes/com/isel/sincroserver/entities/VehicleDriver.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/sincroserver_Web_exploded/WEB-INF/classes/com/isel/sincroserver/exception/SincroServerException.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/sincroserver_Web_exploded/WEB-INF/classes/com/isel/sincroserver/exception/SincroServerException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/sincroserver_Web_exploded/WEB-INF/classes/com/isel/sincroserver/exception/SincroServerExceptionType.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/sincroserver_Web_exploded/WEB-INF/classes/com/isel/sincroserver/exception/SincroServerExceptionType.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/sincroserver_Web_exploded/WEB-INF/classes/com/isel/sincroserver/interfaces/controllers/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/sincroserver_Web_exploded/WEB-INF/classes/com/isel/sincroserver/interfaces/controllers/Controller.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/sincroserver_Web_exploded/WEB-INF/classes/com/isel/sincroserver/interfaces/repositories/Repository.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/sincroserver_Web_exploded/WEB-INF/classes/com/isel/sincroserver/interfaces/repositories/Repository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/sincroserver_Web_exploded/WEB-INF/classes/com/isel/sincroserver/interfaces/resources/Resources.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/sincroserver_Web_exploded/WEB-INF/classes/com/isel/sincroserver/interfaces/resources/Resources.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/sincroserver_Web_exploded/WEB-INF/classes/com/isel/sincroserver/repositories/MySQLRepository$QueryObject.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/sincroserver_Web_exploded/WEB-INF/classes/com/isel/sincroserver/repositories/MySQLRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/sincroserver_Web_exploded/WEB-INF/classes/com/isel/sincroserver/repositories/MySQLRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/sincroserver_Web_exploded/WEB-INF/classes/com/isel/sincroserver/resources/FileResources$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/sincroserver_Web_exploded/WEB-INF/classes/com/isel/sincroserver/resources/FileResources$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/sincroserver_Web_exploded/WEB-INF/classes/com/isel/sincroserver/resources/FileResources.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/sincroserver_Web_exploded/WEB-INF/classes/com/isel/sincroserver/resources/FileResources.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/sincroserver_Web_exploded/WEB-INF/classes/com/isel/sincroserver/resources/Query.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/sincroserver_Web_exploded/WEB-INF/classes/com/isel/sincroserver/resources/Query.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/sincroserver_Web_exploded/WEB-INF/classes/com/isel/sincroserver/resources/Resource.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/sincroserver_Web_exploded/WEB-INF/classes/com/isel/sincroserver/resources/Resource.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/sincroserver_Web_exploded/WEB-INF/classes/com/isel/sincroserver/resources/utils/Utils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/sincroserver_Web_exploded/WEB-INF/classes/log4j2-dev.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/sincroserver_Web_exploded/WEB-INF/classes/log4j2-dev.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/sincroserver_Web_exploded/WEB-INF/classes/log4j2-prod.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/sincroserver_Web_exploded/WEB-INF/classes/log4j2-prod.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/sincroserver_Web_exploded/WEB-INF/classes/queries.json" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/sincroserver_Web_exploded/WEB-INF/classes/queries.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/isel/sincroserver/entities/Driver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/isel/sincroserver/entities/Driver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sincroserver.iml" beforeDir="false" afterPath="$PROJECT_DIR$/sincroserver.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/isel/sincroserver/SincroserverApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/isel/sincroserver/SincroserverApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/isel/sincroserver/controllers/SincroAppController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/isel/sincroserver/controllers/SincroAppController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/isel/sincroserver/entities/Driver.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/isel/sincroserver/entities/Infraction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/isel/sincroserver/entities/Infraction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/isel/sincroserver/entities/Radar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/isel/sincroserver/entities/Radar.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/isel/sincroserver/entities/Vehicle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/isel/sincroserver/entities/Vehicle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/isel/sincroserver/entities/VehicleDriver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/isel/sincroserver/entities/VehicleDriver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/isel/sincroserver/interfaces/controllers/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/isel/sincroserver/interfaces/controllers/Controller.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/isel/sincroserver/interfaces/repositories/Repository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/isel/sincroserver/interfaces/repositories/Repository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/isel/sincroserver/interfaces/resources/Resources.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/isel/sincroserver/interfaces/resources/Resources.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/isel/sincroserver/repositories/MySQLRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/isel/sincroserver/repositories/MySQLRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/isel/sincroserver/resources/FileResources.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/isel/sincroserver/resources/FileResources.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/isel/sincroserver/resources/Query.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/isel/sincroserver/resources/Query.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/dev/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/dev/log4j2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/log4j2-dev.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/dev/queries.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/prod/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/prod/log4j2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/log4j2-prod.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/prod/queries.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/isel/sincroserver/resources/utils/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/isel/sincroserver/utils/Utils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/log4j2-dev.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/log4j2-dev.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/queries.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/queries.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/isel/sincroserver/SincroserverApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/isel/sincroserver/repositories/MySQLRepositoryTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/isel/sincroserver/repositories/MySQLRepositoryTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/isel/sincroserver/repositories/MySQLRepositoryTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/isel/sincroserver/resources/FileRepositoryTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/isel/sincroserver/SincroserverApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/isel/sincroserver/SincroserverApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/isel/sincroserver/controllers/SincroAppController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/isel/sincroserver/controllers/SincroAppController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/isel/sincroserver/entities/Driver.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/isel/sincroserver/entities/Infraction.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/isel/sincroserver/entities/Infraction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/isel/sincroserver/entities/Radar.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/isel/sincroserver/entities/Radar.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/isel/sincroserver/entities/Vehicle.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/isel/sincroserver/entities/Vehicle.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/isel/sincroserver/entities/VehicleDriver.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/isel/sincroserver/entities/VehicleDriver.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/isel/sincroserver/exception/SincroServerException.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/isel/sincroserver/exception/SincroServerException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/isel/sincroserver/exception/SincroServerExceptionType.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/isel/sincroserver/exception/SincroServerExceptionType.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/isel/sincroserver/interfaces/controllers/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/isel/sincroserver/interfaces/controllers/Controller.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/isel/sincroserver/interfaces/repositories/Repository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/isel/sincroserver/interfaces/repositories/Repository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/isel/sincroserver/interfaces/resources/Resources.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/isel/sincroserver/interfaces/resources/Resources.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/isel/sincroserver/repositories/MySQLRepository$Constants.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/isel/sincroserver/repositories/MySQLRepository$QueryObject.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/isel/sincroserver/repositories/MySQLRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/isel/sincroserver/repositories/MySQLRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/isel/sincroserver/resources/FileResources$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/isel/sincroserver/resources/FileResources$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/isel/sincroserver/resources/FileResources.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/isel/sincroserver/resources/FileResources.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/isel/sincroserver/resources/Query.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/isel/sincroserver/resources/Query.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/isel/sincroserver/resources/Resource.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/isel/sincroserver/resources/Resource.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/isel/sincroserver/resources/utils/Utils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/log4j2-dev.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/log4j2-dev.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/queries.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/queries.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/sincroserver-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/sincroserver-0.0.1-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/sincroserver-0.0.1-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/target/sincroserver-0.0.1-SNAPSHOT.jar.original" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.isel.sincroserver.SincroserverApplicationTests.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.isel.sincroserver.SincroserverApplicationTests.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/isel/sincroserver/SincroserverApplicationTests.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../create_database.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../create_database.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../deletes.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../deletes.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../diagrama_casos_de_uso.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../diagrama_casos_de_uso.odg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../diagrama_casos_de_uso_geral.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../diagrama_casos_de_uso_geral.odg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../docs/relatorios/Relatorio de progresso - G42.docx" beforeDir="false" afterPath="$PROJECT_DIR$/../docs/relatorios/Relatorio de progresso - G42.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../evalMagicdraw-v0.0.1.mdzip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sincrodb-modelo-relacional.mwb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sincrodb-modelo-relacional.mwb.bak" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sincrodb-modelo-relacional.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../~$latorio de progresso - G42.docx" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="DatabaseView">
-    <option name="SHOW_INTERMEDIATE" value="true" />
-    <option name="GROUP_DATA_SOURCES" value="true" />
-    <option name="GROUP_SCHEMA" value="true" />
-    <option name="GROUP_CONTENTS" value="false" />
-    <option name="SORT_POSITIONED" value="false" />
-    <option name="SHOW_EMPTY_GROUPS" value="false" />
-    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
-    <option name="HIDDEN_KINDS">
-      <set />
-    </option>
-    <expand />
-    <select />
-  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Enum" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="MavenImportPreferences">
     <option name="importingSettings">
@@ -66,21 +208,30 @@
     </option>
   </component>
   <component name="ProjectId" id="1Za8xi3NtO3kv84WWlhp1X6TLsa" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="extract.method.default.visibility" value="private" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/test/java/com/isel/sincroserver" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.stylelint" value="true" />
+    <property name="node.js.path.for.package.stylelint" value="project" />
+    <property name="node.js.selected.package.stylelint" value="" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Diagrams" />
   </component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
@@ -96,7 +247,7 @@
       <recent name="C:\Users\darkw\Documents\PS1920\sincroserver\src\main\resources\prod" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.MySQLRepositoryTests">
+  <component name="RunManager" selected="Spring Boot.SincroserverApplication">
     <configuration name="MySQLRepositoryTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="sincroserver" />
       <useClassPathOnly />
@@ -110,6 +261,25 @@
       <option name="MAIN_CLASS_NAME" value="com.isel.sincroserver.repositories.MySQLRepositoryTests" />
       <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea -Dspring.profile.active=dev" />
+      <option name="PARAMETERS" value="" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MySQLRepositoryTests.testRepositoryCitizenOps" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="sincroserver" />
+      <useClassPathOnly />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.isel.sincroserver.exception.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.isel.sincroserver.repositories" />
+      <option name="MAIN_CLASS_NAME" value="com.isel.sincroserver.repositories.MySQLRepositoryTests" />
+      <option name="METHOD_NAME" value="testRepositoryCitizenOps" />
+      <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea -Dspring.profile.active=dev" />
       <option name="PARAMETERS" value="" />
       <method v="2">
@@ -153,12 +323,14 @@
     </configuration>
     <list>
       <item itemvalue="JUnit.MySQLRepositoryTests" />
+      <item itemvalue="JUnit.MySQLRepositoryTests.testRepositoryCitizenOps" />
       <item itemvalue="Maven.clean install" />
       <item itemvalue="Spring Boot.SincroserverApplication" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.MySQLRepositoryTests" />
+        <item itemvalue="JUnit.MySQLRepositoryTests.testRepositoryCitizenOps" />
       </list>
     </recent_temporary>
   </component>
@@ -206,6 +378,31 @@
       <workItem from="1586881952998" duration="3014000" />
       <workItem from="1586961751644" duration="1635000" />
       <workItem from="1587979219861" duration="619000" />
+      <workItem from="1588698612093" duration="600000" />
+      <workItem from="1588777108033" duration="3241000" />
+      <workItem from="1588789313766" duration="1264000" />
+      <workItem from="1588840409827" duration="19000" />
+      <workItem from="1588840448915" duration="2549000" />
+      <workItem from="1588843387052" duration="6737000" />
+      <workItem from="1589051313752" duration="25750000" />
+      <workItem from="1589187253162" duration="7239000" />
+      <workItem from="1589299484803" duration="2269000" />
+      <workItem from="1589360495338" duration="16210000" />
+      <workItem from="1589446868855" duration="5182000" />
+      <workItem from="1589532206075" duration="10918000" />
+      <workItem from="1589576385837" duration="7671000" />
+      <workItem from="1589679553000" duration="13684000" />
+      <workItem from="1589798778740" duration="4022000" />
+      <workItem from="1589881870356" duration="6504000" />
+      <workItem from="1590137590546" duration="15136000" />
+      <workItem from="1590372835893" duration="8467000" />
+      <workItem from="1590397539183" duration="6124000" />
+      <workItem from="1590474442922" duration="5451000" />
+      <workItem from="1590505799733" duration="5752000" />
+      <workItem from="1590574890197" duration="195000" />
+      <workItem from="1590603869406" duration="13000" />
+      <workItem from="1590918026827" duration="351000" />
+      <workItem from="1591010185180" duration="2124000" />
     </task>
     <servers />
   </component>
@@ -214,6 +411,11 @@
   </component>
   <component name="UnknownFeatures">
     <option featureType="com.intellij.fileTypeFactory" implementationName="*.log" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$" />
+    </ignored-roots>
   </component>
   <component name="WindowStateProjectService">
     <state x="552" y="178" key="#Project_Structure" timestamp="1586793228662">
@@ -224,13 +426,15 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="620" y="95" key="#Unnamed/0.0.1920.1040/7.1080.1536.824@0.0.1920.1040" timestamp="1586879452941" />
-    <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1586879177546">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="361" y="152" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1589090543181">
+      <screen x="0" y="0" width="1676" height="902" />
     </state>
+    <state x="361" y="152" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1676.902/7.1080.1676.902@0.0.1676.902" timestamp="1589090543181" />
     <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040/7.1080.1536.824@0.0.1920.1040" timestamp="1586879177546" />
-    <state x="92" y="92" width="1736" height="856" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1586279044094">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="80" y="80" width="1516" height="743" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1588882597253">
+      <screen x="0" y="0" width="1676" height="902" />
     </state>
+    <state x="80" y="80" width="1516" height="743" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.0.1676.902/7.1080.1676.902@0.0.1676.902" timestamp="1588882597253" />
     <state x="92" y="92" width="1736" height="856" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.0.1920.1040/7.1080.1536.824@0.0.1920.1040" timestamp="1586279044094" />
     <state x="733" y="323" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1586275115871">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -244,25 +448,45 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="225" key="#com.intellij.ide.macro.MacrosDialog/0.0.1920.1040/7.1080.1536.824@0.0.1920.1040" timestamp="1586798016851" />
-    <state x="765" y="229" key="#com.intellij.ide.util.MemberChooser" timestamp="1586860592076">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="668" y="199" key="#com.intellij.ide.util.MemberChooser" timestamp="1590149871617">
+      <screen x="0" y="0" width="1676" height="902" />
     </state>
+    <state x="668" y="199" key="#com.intellij.ide.util.MemberChooser/0.0.1676.902/7.1080.1676.902@0.0.1676.902" timestamp="1590149871617" />
     <state x="765" y="229" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/7.1080.1536.824@0.0.1920.1040" timestamp="1586860592076" />
-    <state x="640" y="248" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1586531675406">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="559" y="215" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1588790561476">
+      <screen x="0" y="0" width="1676" height="902" />
     </state>
+    <state x="559" y="215" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1676.902/7.1080.1676.902@0.0.1676.902" timestamp="1588790561476" />
     <state x="640" y="248" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1920.1040/7.1080.1536.824@0.0.1920.1040" timestamp="1586531675406" />
+    <state x="395" y="375" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1589091413575">
+      <screen x="0" y="0" width="1676" height="902" />
+    </state>
+    <state x="395" y="375" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1676.902/7.1080.1676.902@0.0.1676.902" timestamp="1589091413575" />
     <state x="743" y="389" width="433" height="268" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1586881256051">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="743" y="389" width="433" height="268" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1920.1040/7.1080.1536.824@0.0.1920.1040" timestamp="1586881256051" />
+    <state x="410" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1589070355197">
+      <screen x="0" y="0" width="1676" height="902" />
+    </state>
+    <state x="410" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1676.902/7.1080.1676.902@0.0.1676.902" timestamp="1589070355197" />
     <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1586866801441">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040/7.1080.1536.824@0.0.1920.1040" timestamp="1586866801441" />
-    <state width="465" height="466" key="DebuggerActiveHint" timestamp="1586879263281">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="659" y="384" key="#com.intellij.ws.xml.jaxb.GenerateJAXBSchemasFromJavaDialog" timestamp="1588844090599">
+      <screen x="0" y="0" width="1676" height="902" />
     </state>
+    <state x="659" y="384" key="#com.intellij.ws.xml.jaxb.GenerateJAXBSchemasFromJavaDialog/0.0.1676.902@0.0.1676.902" timestamp="1588844090599" />
+    <state x="592" y="153" key="#xdebugger.evaluate" timestamp="1590150848478">
+      <screen x="0" y="0" width="1676" height="902" />
+    </state>
+    <state x="592" y="153" key="#xdebugger.evaluate/0.0.1676.902/7.1080.1676.902@0.0.1676.902" timestamp="1590150848478" />
+    <state width="901" height="405" key="DebuggerActiveHint" timestamp="1590381087402">
+      <screen x="0" y="0" width="1676" height="902" />
+    </state>
+    <state width="901" height="405" key="DebuggerActiveHint/0.0.1676.902/7.1080.1676.902@0.0.1676.902" timestamp="1590381087402" />
+    <state width="406" height="405" key="DebuggerActiveHint/0.0.1676.902@0.0.1676.902" timestamp="1588841178896" />
     <state width="465" height="466" key="DebuggerActiveHint/0.0.1920.1040/7.1080.1536.824@0.0.1920.1040" timestamp="1586879263281" />
     <state x="827" y="270" key="EnvironmentVariablesDialog" timestamp="1586798025058">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -272,81 +496,134 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="261" key="FileChooserDialogImpl/0.0.1920.1040/7.1080.1536.824@0.0.1920.1040" timestamp="1585584362265" />
-    <state width="1877" height="221" key="GridCell.Tab.0.bottom" timestamp="1586881012099">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1632" height="227" key="GridCell.Tab.0.bottom" timestamp="1590399454325">
+      <screen x="0" y="0" width="1676" height="902" />
     </state>
+    <state width="1632" height="227" key="GridCell.Tab.0.bottom/0.0.1676.902/7.1080.1676.902@0.0.1676.902" timestamp="1590399454325" />
+    <state width="1632" height="183" key="GridCell.Tab.0.bottom/0.0.1676.902@0.0.1676.902" timestamp="1588843365954" />
     <state width="1877" height="221" key="GridCell.Tab.0.bottom/0.0.1920.1040/7.1080.1536.824@0.0.1920.1040" timestamp="1586881012099" />
-    <state width="1877" height="221" key="GridCell.Tab.0.center" timestamp="1586881012099">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1632" height="227" key="GridCell.Tab.0.center" timestamp="1590399454325">
+      <screen x="0" y="0" width="1676" height="902" />
     </state>
+    <state width="1632" height="227" key="GridCell.Tab.0.center/0.0.1676.902/7.1080.1676.902@0.0.1676.902" timestamp="1590399454325" />
+    <state width="1632" height="183" key="GridCell.Tab.0.center/0.0.1676.902@0.0.1676.902" timestamp="1588843365953" />
     <state width="1877" height="221" key="GridCell.Tab.0.center/0.0.1920.1040/7.1080.1536.824@0.0.1920.1040" timestamp="1586881012099" />
-    <state width="1877" height="221" key="GridCell.Tab.0.left" timestamp="1586881012099">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1632" height="227" key="GridCell.Tab.0.left" timestamp="1590399454325">
+      <screen x="0" y="0" width="1676" height="902" />
     </state>
+    <state width="1632" height="227" key="GridCell.Tab.0.left/0.0.1676.902/7.1080.1676.902@0.0.1676.902" timestamp="1590399454325" />
+    <state width="1632" height="183" key="GridCell.Tab.0.left/0.0.1676.902@0.0.1676.902" timestamp="1588843365953" />
     <state width="1877" height="221" key="GridCell.Tab.0.left/0.0.1920.1040/7.1080.1536.824@0.0.1920.1040" timestamp="1586881012099" />
-    <state width="1877" height="221" key="GridCell.Tab.0.right" timestamp="1586881012099">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1632" height="227" key="GridCell.Tab.0.right" timestamp="1590399454325">
+      <screen x="0" y="0" width="1676" height="902" />
     </state>
+    <state width="1632" height="227" key="GridCell.Tab.0.right/0.0.1676.902/7.1080.1676.902@0.0.1676.902" timestamp="1590399454325" />
+    <state width="1632" height="183" key="GridCell.Tab.0.right/0.0.1676.902@0.0.1676.902" timestamp="1588843365954" />
     <state width="1877" height="221" key="GridCell.Tab.0.right/0.0.1920.1040/7.1080.1536.824@0.0.1920.1040" timestamp="1586881012099" />
-    <state width="1877" height="272" key="GridCell.Tab.1.bottom" timestamp="1586880619656">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1632" height="227" key="GridCell.Tab.1.bottom" timestamp="1590399454326">
+      <screen x="0" y="0" width="1676" height="902" />
     </state>
+    <state width="1632" height="227" key="GridCell.Tab.1.bottom/0.0.1676.902/7.1080.1676.902@0.0.1676.902" timestamp="1590399454326" />
+    <state width="1632" height="227" key="GridCell.Tab.1.bottom/0.0.1676.902@0.0.1676.902" timestamp="1588843365944" />
     <state width="1877" height="272" key="GridCell.Tab.1.bottom/0.0.1920.1040/7.1080.1536.824@0.0.1920.1040" timestamp="1586880619656" />
-    <state width="1877" height="272" key="GridCell.Tab.1.center" timestamp="1586880619656">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1632" height="227" key="GridCell.Tab.1.center" timestamp="1590399454326">
+      <screen x="0" y="0" width="1676" height="902" />
     </state>
+    <state width="1632" height="227" key="GridCell.Tab.1.center/0.0.1676.902/7.1080.1676.902@0.0.1676.902" timestamp="1590399454326" />
+    <state width="1632" height="227" key="GridCell.Tab.1.center/0.0.1676.902@0.0.1676.902" timestamp="1588843365944" />
     <state width="1877" height="272" key="GridCell.Tab.1.center/0.0.1920.1040/7.1080.1536.824@0.0.1920.1040" timestamp="1586880619656" />
-    <state width="1877" height="272" key="GridCell.Tab.1.left" timestamp="1586880619656">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1632" height="227" key="GridCell.Tab.1.left" timestamp="1590399454325">
+      <screen x="0" y="0" width="1676" height="902" />
     </state>
+    <state width="1632" height="227" key="GridCell.Tab.1.left/0.0.1676.902/7.1080.1676.902@0.0.1676.902" timestamp="1590399454325" />
+    <state width="1632" height="227" key="GridCell.Tab.1.left/0.0.1676.902@0.0.1676.902" timestamp="1588843365943" />
     <state width="1877" height="272" key="GridCell.Tab.1.left/0.0.1920.1040/7.1080.1536.824@0.0.1920.1040" timestamp="1586880619656" />
-    <state width="1877" height="272" key="GridCell.Tab.1.right" timestamp="1586880619656">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1632" height="227" key="GridCell.Tab.1.right" timestamp="1590399454326">
+      <screen x="0" y="0" width="1676" height="902" />
     </state>
+    <state width="1632" height="227" key="GridCell.Tab.1.right/0.0.1676.902/7.1080.1676.902@0.0.1676.902" timestamp="1590399454326" />
+    <state width="1632" height="227" key="GridCell.Tab.1.right/0.0.1676.902@0.0.1676.902" timestamp="1588843365944" />
     <state width="1877" height="272" key="GridCell.Tab.1.right/0.0.1920.1040/7.1080.1536.824@0.0.1920.1040" timestamp="1586880619656" />
-    <state width="1877" height="272" key="GridCell.Tab.2.bottom" timestamp="1586880619657">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1632" height="197" key="GridCell.Tab.2.bottom" timestamp="1590381314043">
+      <screen x="0" y="0" width="1676" height="902" />
     </state>
+    <state width="1632" height="197" key="GridCell.Tab.2.bottom/0.0.1676.902/7.1080.1676.902@0.0.1676.902" timestamp="1590381314043" />
+    <state width="1632" height="227" key="GridCell.Tab.2.bottom/0.0.1676.902@0.0.1676.902" timestamp="1588843365944" />
     <state width="1877" height="272" key="GridCell.Tab.2.bottom/0.0.1920.1040/7.1080.1536.824@0.0.1920.1040" timestamp="1586880619657" />
-    <state width="1877" height="272" key="GridCell.Tab.2.center" timestamp="1586880619657">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1632" height="197" key="GridCell.Tab.2.center" timestamp="1590381314043">
+      <screen x="0" y="0" width="1676" height="902" />
     </state>
+    <state width="1632" height="197" key="GridCell.Tab.2.center/0.0.1676.902/7.1080.1676.902@0.0.1676.902" timestamp="1590381314043" />
+    <state width="1632" height="227" key="GridCell.Tab.2.center/0.0.1676.902@0.0.1676.902" timestamp="1588843365944" />
     <state width="1877" height="272" key="GridCell.Tab.2.center/0.0.1920.1040/7.1080.1536.824@0.0.1920.1040" timestamp="1586880619657" />
-    <state width="1877" height="272" key="GridCell.Tab.2.left" timestamp="1586880619657">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1632" height="197" key="GridCell.Tab.2.left" timestamp="1590381314043">
+      <screen x="0" y="0" width="1676" height="902" />
     </state>
+    <state width="1632" height="197" key="GridCell.Tab.2.left/0.0.1676.902/7.1080.1676.902@0.0.1676.902" timestamp="1590381314043" />
+    <state width="1632" height="227" key="GridCell.Tab.2.left/0.0.1676.902@0.0.1676.902" timestamp="1588843365944" />
     <state width="1877" height="272" key="GridCell.Tab.2.left/0.0.1920.1040/7.1080.1536.824@0.0.1920.1040" timestamp="1586880619657" />
-    <state width="1877" height="272" key="GridCell.Tab.2.right" timestamp="1586880619657">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1632" height="197" key="GridCell.Tab.2.right" timestamp="1590381314043">
+      <screen x="0" y="0" width="1676" height="902" />
     </state>
+    <state width="1632" height="197" key="GridCell.Tab.2.right/0.0.1676.902/7.1080.1676.902@0.0.1676.902" timestamp="1590381314043" />
+    <state width="1632" height="227" key="GridCell.Tab.2.right/0.0.1676.902@0.0.1676.902" timestamp="1588843365944" />
     <state width="1877" height="272" key="GridCell.Tab.2.right/0.0.1920.1040/7.1080.1536.824@0.0.1920.1040" timestamp="1586880619657" />
+    <state width="1632" height="197" key="GridCell.Tab.3.bottom" timestamp="1590381314043">
+      <screen x="0" y="0" width="1676" height="902" />
+    </state>
+    <state width="1632" height="197" key="GridCell.Tab.3.bottom/0.0.1676.902/7.1080.1676.902@0.0.1676.902" timestamp="1590381314043" />
+    <state width="1632" height="197" key="GridCell.Tab.3.center" timestamp="1590381314042">
+      <screen x="0" y="0" width="1676" height="902" />
+    </state>
+    <state width="1632" height="197" key="GridCell.Tab.3.center/0.0.1676.902/7.1080.1676.902@0.0.1676.902" timestamp="1590381314042" />
+    <state width="1632" height="197" key="GridCell.Tab.3.left" timestamp="1590381314042">
+      <screen x="0" y="0" width="1676" height="902" />
+    </state>
+    <state width="1632" height="197" key="GridCell.Tab.3.left/0.0.1676.902/7.1080.1676.902@0.0.1676.902" timestamp="1590381314042" />
+    <state width="1632" height="197" key="GridCell.Tab.3.right" timestamp="1590381314042">
+      <screen x="0" y="0" width="1676" height="902" />
+    </state>
+    <state width="1632" height="197" key="GridCell.Tab.3.right/0.0.1676.902/7.1080.1676.902@0.0.1676.902" timestamp="1590381314042" />
+    <state x="367" y="105" key="Maven.ArtifactSearchDialog" timestamp="1590138664358">
+      <screen x="0" y="0" width="1676" height="902" />
+    </state>
+    <state x="367" y="105" key="Maven.ArtifactSearchDialog/0.0.1676.902/7.1080.1676.902@0.0.1676.902" timestamp="1590138664358" />
     <state x="775" y="454" key="ReplaceDuplicatesPrompt" timestamp="1585595898459">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="775" y="454" key="ReplaceDuplicatesPrompt/0.0.1920.1040/7.1080.1536.824@0.0.1920.1040" timestamp="1585595898459" />
-    <state x="523" y="189" key="SettingsEditor" timestamp="1586877550929">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="457" y="164" key="SettingsEditor" timestamp="1591010419645">
+      <screen x="0" y="0" width="1676" height="902" />
     </state>
+    <state x="457" y="164" key="SettingsEditor/0.0.1676.902/7.1080.1676.902@0.0.1676.902" timestamp="1591010419645" />
+    <state x="457" y="164" key="SettingsEditor/0.0.1676.902@0.0.1676.902" timestamp="1588843363802" />
     <state x="523" y="189" key="SettingsEditor/0.0.1920.1040/7.1080.1536.824@0.0.1920.1040" timestamp="1586877550929" />
     <state width="968" height="528" key="XDebugger.FullValuePopup" timestamp="1586355427375">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="968" height="528" key="XDebugger.FullValuePopup/0.0.1920.1040/7.1080.1536.824@0.0.1920.1040" timestamp="1586355427375" />
+    <state x="651" y="364" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1588778216832">
+      <screen x="0" y="0" width="1676" height="902" />
+    </state>
+    <state x="651" y="364" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1676.902/7.1080.1676.902@0.0.1676.902" timestamp="1588778216832" />
     <state x="690" y="286" width="540" height="496" key="extract.method.dialog" timestamp="1586362321358">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="286" width="540" height="496" key="extract.method.dialog/0.0.1920.1040/7.1080.1536.824@0.0.1920.1040" timestamp="1586362321358" />
-    <state x="667" y="122" width="585" height="795" key="find.popup" timestamp="1586799132625">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="582" y="106" width="553" height="690" key="find.popup" timestamp="1590481972031">
+      <screen x="0" y="0" width="1676" height="902" />
     </state>
+    <state x="582" y="106" width="553" height="690" key="find.popup/0.0.1676.902/7.1080.1676.902@0.0.1676.902" timestamp="1590481972031" />
     <state x="667" y="122" width="585" height="795" key="find.popup/0.0.1920.1040/7.1080.1536.824@0.0.1920.1040" timestamp="1586799132625" />
-    <state x="616" y="240" width="672" height="677" key="run.anything.popup" timestamp="1586879083930">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="538" y="208" width="587" height="588" key="run.anything.popup" timestamp="1590482076311">
+      <screen x="0" y="0" width="1676" height="902" />
     </state>
+    <state x="538" y="208" width="587" height="588" key="run.anything.popup/0.0.1676.902/7.1080.1676.902@0.0.1676.902" timestamp="1590482076311" />
     <state x="616" y="240" width="672" height="677" key="run.anything.popup/0.0.1920.1040/7.1080.1536.824@0.0.1920.1040" timestamp="1586879083930" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1585328630952">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="544" y="195" width="672" height="589" key="search.everywhere.popup" timestamp="1590378929860">
+      <screen x="0" y="0" width="1676" height="902" />
     </state>
+    <state x="544" y="195" width="672" height="589" key="search.everywhere.popup/0.0.1676.902/7.1080.1676.902@0.0.1676.902" timestamp="1590378929860" />
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/7.1080.1536.824@0.0.1920.1040" timestamp="1585328630952" />
   </component>
 </project>

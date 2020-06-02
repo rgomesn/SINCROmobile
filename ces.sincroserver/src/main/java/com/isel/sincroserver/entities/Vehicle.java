@@ -4,37 +4,25 @@ import com.isel.sincroserver.exception.SincroServerException;
 import com.isel.sincroserver.interfaces.repositories.Repository;
 
 import java.util.Date;
-import java.util.Objects;
 
 public class Vehicle {
     long vehicle_id;
     String licence_plate;
     String make;
     String model;
-    Date _date;
+    Date vehicle_date;
+    char category;
 
-    public Vehicle(long vehicle_id, String licence_plate, String make, String model, Date _date) {
+    public Vehicle() {
+    }
+
+    public Vehicle(long vehicle_id, String licence_plate, String make, String model, Date vehicle_date, char category) {
         this.vehicle_id = vehicle_id;
         this.licence_plate = licence_plate;
         this.make = make;
         this.model = model;
-        this._date = _date;
-    }
-
-    public Vehicle getVehicle(Repository repository) throws SincroServerException {
-        return repository.getVehicle(this);
-    }
-
-    public void insertVehicle(Repository repository) throws SincroServerException {
-        repository.insertVehicle(this);
-    }
-
-    public void updateVehicle(Repository repository) throws SincroServerException {
-        repository.updateVehicle(this);
-    }
-
-    public void deleteVehicle(Repository repository) throws SincroServerException {
-        repository.deleteVehicle(this);
+        this.vehicle_date = vehicle_date;
+        this.category = category;
     }
 
     public long getVehicle_id() {
@@ -69,12 +57,20 @@ public class Vehicle {
         this.model = model;
     }
 
-    public Date get_date() {
-        return _date;
+    public Date getVehicle_date() {
+        return vehicle_date;
     }
 
-    public void set_date(Date _date) {
-        this._date = _date;
+    public void setVehicle_date(Date vehicle_date) {
+        this.vehicle_date = vehicle_date;
+    }
+
+    public char getCategory() {
+        return category;
+    }
+
+    public void setCategory(char category) {
+        this.category = category;
     }
 
     @Override
@@ -86,7 +82,7 @@ public class Vehicle {
                 licence_plate.equals(vehicle.licence_plate) &&
                 make.equals(vehicle.make) &&
                 model.equals(vehicle.model) &&
-                _date.equals(vehicle._date);
+                vehicle_date.equals(vehicle.vehicle_date);
     }
 
     @Override
@@ -96,7 +92,7 @@ public class Vehicle {
                 ", licence_plate='" + licence_plate + '\'' +
                 ", make='" + make + '\'' +
                 ", model='" + model + '\'' +
-                ", _date=" + _date +
+                ", _date=" + vehicle_date +
                 '}';
     }
 }
