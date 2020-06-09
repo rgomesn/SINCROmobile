@@ -12,10 +12,10 @@ import com.isel.sincroapp.R;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link InformationReviewFragment#newInstance} factory method to
+ * Use the {@link VerificationCodeFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class InformationReviewFragment extends Fragment {
+public class VerificationCodeFragment extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -26,7 +26,7 @@ public class InformationReviewFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public InformationReviewFragment() {
+    public VerificationCodeFragment() {
         // Required empty public constructor
     }
 
@@ -36,11 +36,11 @@ public class InformationReviewFragment extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment InformationReviewFragment.
+     * @return A new instance of fragment VerificationCodeFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static InformationReviewFragment newInstance(String param1, String param2) {
-        InformationReviewFragment fragment = new InformationReviewFragment();
+    public static VerificationCodeFragment newInstance(String param1, String param2) {
+        VerificationCodeFragment fragment = new VerificationCodeFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -61,6 +61,6 @@ public class InformationReviewFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_information_review, container, false);
+        return inflater.inflate(R.layout.fragment_verification_code, container, false);
     }
 }
