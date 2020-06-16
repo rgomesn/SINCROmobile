@@ -1,8 +1,11 @@
 package com.isel.sincroapp.data.entities;
 
+import android.os.Parcelable;
+
+import java.io.Serializable;
 import java.util.Objects;
 
-public class Citizen {
+public class Citizen implements Serializable {
     long citizen_id;
     String first_name;
     String middle_name;

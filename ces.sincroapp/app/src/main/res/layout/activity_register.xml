@@ -11,12 +11,15 @@
     tools:context=".ui.register.RegisterActivity">
 
 
-    <androidx.viewpager2.widget.ViewPager2
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/register_const_layout"
         android:layout_width="409dp"
-        android:layout_height="729dp"
+        android:layout_height="601dp"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="1dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

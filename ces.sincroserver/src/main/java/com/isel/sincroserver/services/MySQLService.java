@@ -11,6 +11,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 @Qualifier("MySQLService")
@@ -107,5 +108,41 @@ public class MySQLService {
 
     public User getUser(String username) throws SincroServerException {
         return repository.getUser(username);
+    }
+
+    public List<Vehicle> getVehicles(Citizen citizen) throws SincroServerException {
+        return repository.getCitizenVehicles(citizen.getCc_number());
+    }
+
+    public HashMap<String, List<? extends Infraction>> getPastInfractions(Citizen citizen) throws SincroServerException {
+        HashMap<String, List<? extends Infraction>> infractions = new HashMap<>();
+        List<Vehicle> citizenVehicles = repository.getCitizenVehicles(citizen.getCc_number());
+
+        for (Vehicle vehicle : citizenVehicles) {
+            infractions.put("speedInfractions", repository.getVehicleSpeedInfractions(vehicle.getLicence_plate())
+                    .stream()
+                    .filter(Infraction::isPaid)
+                    .collect(Collectors.toList()));
+            infractions.put("redLightInfractions", repository.getVehicleRedLightInfractions(vehicle.getLicence_plate())
+                    .stream()
+                    .filter(Infraction::isPaid)
+                    .collect(Collectors.toList()));
+            infractions.put("distanceInfractions", repository.getVehicleDistanceInfractions(vehicle.getLicence_plate())
+                    .stream()
+                    .filter(Infraction::isPaid)
+                    .collect(Collectors.toList()));
+        }
+
+        return infractions;
+    }
+
+    public boolean insertVehicles(List<Vehicle> vehicles, Citizen citizen) throws SincroServerException {
+        for (Vehicle v : vehicles) {
+            repository.insertVehicle(v);
+            VehicleOwner vo = new VehicleOwner(0, citizen.getCc_number(), v.getLicence_plate(), true, v.getVehicle_date(), null);
+            repository.insertVehicleOwner(vo);
+        }
+
+        return true;
     }
 }

@@ -1,16 +1,18 @@
 package com.isel.sincroapp.data.entities;
 
-public class User {
+import java.io.Serializable;
+
+public class User implements Serializable {
     String username;
-    String password;
+    String pwd;
     String cc_number;
 
     public User() {
     }
 
-    public User(String username, String password, String cc_number) {
+    public User(String username, String pwd, String cc_number) {
         this.username = username;
-        this.password = password;
+        this.pwd = pwd;
         this.cc_number = cc_number;
     }
 
@@ -22,12 +24,12 @@ public class User {
         this.username = username;
     }
 
-    public String getPassword() {
-        return password;
+    public String getPwd() {
+        return pwd;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
+    public void setPwd(String pwd) {
+        this.pwd = pwd;
     }
 
     public String getCc_number() {

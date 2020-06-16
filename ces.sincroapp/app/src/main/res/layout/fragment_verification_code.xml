@@ -25,7 +25,6 @@
         android:id="@+id/cc_number_field"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="123456789"
         app:layout_constraintBottom_toTopOf="@+id/confirmation_code_text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/cc_number_label"
@@ -48,10 +47,9 @@
         app:layout_constraintHorizontal_bias="0.07" />
 
     <TextView
-        android:id="@+id/emailField"
+        android:id="@+id/email_field"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="raf*************@gmail.com"
         app:layout_constraintBottom_toTopOf="@+id/confirmation_code_text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/cc_number_label"

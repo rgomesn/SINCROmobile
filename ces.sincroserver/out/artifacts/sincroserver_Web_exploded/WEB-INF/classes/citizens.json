@@ -1,12 +1,24 @@
 {
   "123456789": {
-    "citizen_id": 0,
-    "first_name": "José",
-    "middle_name": "Pedro",
-    "last_name": "Santos",
-    "cc_number": "123456789",
-    "driver_licence_number": "987654321",
-    "phone_number": "912345678",
-    "email": "rafael.gomes.nobre@gmail.com"
+    "citizen": {
+      "citizen_id": 0,
+      "first_name": "Rafael",
+      "middle_name": "Gomes",
+      "last_name": "Nobre",
+      "cc_number": "123456789",
+      "driver_licence_number": "987654321",
+      "phone_number": "912345678",
+      "email": "rafael.gomes.nobre@gmail.com"
+    },
+    "vehicles": [
+      {
+        "vehicle_id": 0,
+        "licence_plate": "12-AB-34",
+        "make": "Opel",
+        "model": "Corsa",
+        "vehicle_date": "2001-01-01",
+        "category": "L"
+      }
+    ]
   }
 }

@@ -140,7 +140,7 @@ public class RegistrationController {
         }
 
         try {
-            if (!mySQLService.insertCitizen(citizen)) {
+            if (!mySQLService.insertCitizen(citizen) || !mySQLService.insertVehicles(externalCitizenDataProvider.obtainCitizenVehicles(citizen.getCc_number()), citizen)) {
                 logger.error("Could not insert citizen with cc_number: " + citizen.getCc_number());
                 return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
             }

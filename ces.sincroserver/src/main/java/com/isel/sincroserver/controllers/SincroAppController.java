@@ -93,7 +93,7 @@ public class SincroAppController {
         return new ResponseEntity<List<Infraction>>(unpaidInfractions, HttpStatus.OK);
     }
 
-    @GetMapping(value="/getInfractions", produces= MediaType.APPLICATION_JSON_VALUE)
+    @PostMapping(value="/getInfractions", produces= MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<HashMap<String, List<? extends Infraction>>> getInfractions(@RequestBody ObjectNode objectNode) {
         Map<String, Object> map = null;
 
@@ -112,16 +112,78 @@ public class SincroAppController {
         }
 
         Citizen citizen = (Citizen)map.get("citizen");
-        HashMap<String, List<? extends Infraction>> unpaidInfractions;
+        HashMap<String, List<? extends Infraction>> infractions;
 
         try {
-            unpaidInfractions = mySQLService.getInfractions(citizen);
+            infractions = mySQLService.getInfractions(citizen);
         } catch (SincroServerException e) {
             logger.error(e);
             return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
         }
 
-        return new ResponseEntity<>(unpaidInfractions, HttpStatus.OK);
+        return new ResponseEntity<>(infractions, HttpStatus.OK);
+    }
+
+    @GetMapping(value="/getPastInfractions", produces= MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<HashMap<String, List<? extends Infraction>>> getPastInfractions(@RequestBody ObjectNode objectNode) {
+        Map<String, Object> map = null;
+
+        try {
+            map = utils.getRequestParameters(objectNode,
+                    (List<String> errorList) -> errorList.forEach(str -> logger.error("json object with name \"" + str + "\" required in request body")),
+                    new Pair<>("citizen", Citizen.class));
+
+            if (map == null) {
+                logger.error("getPastInfractions - missing parameters");
+                return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+            }
+        } catch (IOException e) {
+            logger.error("getPastInfractions - could not read request body: " + objectNode.toString());
+            return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+        }
+
+        Citizen citizen = (Citizen)map.get("citizen");
+        HashMap<String, List<? extends Infraction>> infractions;
+
+        try {
+            infractions = mySQLService.getPastInfractions(citizen);
+        } catch (SincroServerException e) {
+            logger.error(e);
+            return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+
+        return new ResponseEntity<>(infractions, HttpStatus.OK);
+    }
+
+    @GetMapping(value="/getVehicles", produces= MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<List<Vehicle>> getVehicles(@RequestBody ObjectNode objectNode) {
+        Map<String, Object> map = null;
+
+        try {
+            map = utils.getRequestParameters(objectNode,
+                    (List<String> errorList) -> errorList.forEach(str -> logger.error("json object with name \"" + str + "\" required in request body")),
+                    new Pair<>("citizen", Citizen.class));
+
+            if (map == null) {
+                logger.error("getVehicles - missing parameters");
+                return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+            }
+        } catch (IOException e) {
+            logger.error("getVehicles - could not read request body: " + objectNode.toString());
+            return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+        }
+
+        Citizen citizen = (Citizen)map.get("citizen");
+        List<Vehicle> vehicles;
+
+        try {
+            vehicles = mySQLService.getVehicles(citizen);
+        } catch (SincroServerException e) {
+            logger.error(e);
+            return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+
+        return new ResponseEntity<>(vehicles, HttpStatus.OK);
     }
 
     @GetMapping(value="/getRadars", produces= MediaType.APPLICATION_JSON_VALUE)

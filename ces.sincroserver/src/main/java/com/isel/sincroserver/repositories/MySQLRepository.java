@@ -686,7 +686,7 @@ public class MySQLRepository implements Repository {
         logger.info(Constants.GET_VEHICLE_RED_LIGHT_INFRACTIONS + ": " + query);
         logger.debug(Constants.GET_VEHICLE_RED_LIGHT_INFRACTIONS + ": licence_plate: " + licence_plate);
 
-        return namedParameterJdbcTemplate.query(query, (rs, rowNum) -> mapRedLightInfraction(rs, true));
+        return namedParameterJdbcTemplate.query(query, parameters, (rs, rowNum) -> mapRedLightInfraction(rs, true));
     }
 
     @Override
@@ -701,7 +701,7 @@ public class MySQLRepository implements Repository {
         logger.debug(Constants.GET_VEHICLE_AND_RADAR_RED_LIGHT_INFRACTIONS + ": radar_id: " + radar_id +
                 ", licence_plate: " + licence_plate);
 
-        return namedParameterJdbcTemplate.query(query, (rs, rowNum) -> mapRedLightInfraction(rs, true));
+        return namedParameterJdbcTemplate.query(query, parameters, (rs, rowNum) -> mapRedLightInfraction(rs, true));
     }
 
     @Override
@@ -761,7 +761,7 @@ public class MySQLRepository implements Repository {
         logger.info(Constants.GET_VEHICLE_SPEED_INFRACTIONS + ": " + query);
         logger.debug(Constants.GET_VEHICLE_SPEED_INFRACTIONS + ": licence_plate: " + licence_plate);
 
-        return namedParameterJdbcTemplate.query(query, (rs, rowNum) -> mapSpeedInfraction(rs, true));
+        return namedParameterJdbcTemplate.query(query, parameters, (rs, rowNum) -> mapSpeedInfraction(rs, true));
     }
 
     @Override
@@ -776,7 +776,7 @@ public class MySQLRepository implements Repository {
         logger.debug(Constants.GET_VEHICLE_AND_RADAR_SPEED_INFRACTIONS + ": radar_id: " + radar_id +
                 ", licence_plate: " + licence_plate);
 
-        return namedParameterJdbcTemplate.query(query, (rs, rowNum) -> mapSpeedInfraction(rs, true));
+        return namedParameterJdbcTemplate.query(query, parameters, (rs, rowNum) -> mapSpeedInfraction(rs, true));
     }
 
     @Override
@@ -832,7 +832,7 @@ public class MySQLRepository implements Repository {
         logger.info(Constants.GET_VEHICLE_DISTANCE_INFRACTIONS + ": " + query);
         logger.debug(Constants.GET_VEHICLE_DISTANCE_INFRACTIONS + ": licence_plate: " + licence_plate);
 
-        return namedParameterJdbcTemplate.query(query, (rs, rowNum) -> mapDistanceInfraction(rs, true));
+        return namedParameterJdbcTemplate.query(query, parameters, (rs, rowNum) -> mapDistanceInfraction(rs, true));
     }
 
     @Override
@@ -847,7 +847,7 @@ public class MySQLRepository implements Repository {
         logger.debug(Constants.GET_VEHICLE_AND_RADAR_DISTANCE_INFRACTIONS + ": radar_id: " + radar_id +
                 ", licence_plate: " + licence_plate);
 
-        return namedParameterJdbcTemplate.query(query, (rs, rowNum) -> mapDistanceInfraction(rs, true));
+        return namedParameterJdbcTemplate.query(query, parameters, (rs, rowNum) -> mapDistanceInfraction(rs, true));
     }
 
     @Override
@@ -1137,13 +1137,21 @@ public class MySQLRepository implements Repository {
 
     private SpeedInfraction mapSpeedInfraction(ResultSet rs, boolean list) throws SQLException {
         if (!list && !rs.next()) return null;
+
+        Date d;
+        try {
+            d = rs.getDate("payment_date_time");
+        } catch (Exception e) {
+            d = null;
+        }
+
         return new SpeedInfraction(rs.getLong("infraction_id"),
                 rs.getString("licence_plate"),
                 rs.getLong("radar_id"),
                 rs.getDate("infraction_date_time"),
                 rs.getDouble("price"),
                 rs.getBoolean("paid"),
-                rs.getDate("payment_date_time"),
+                d,
                 rs.getInt("vehicle_speed"),
                 rs.getInt("speed_limit"),
                 rs.getString("direction").charAt(0),
@@ -1152,13 +1160,21 @@ public class MySQLRepository implements Repository {
 
     private RedLightInfraction mapRedLightInfraction(ResultSet rs, boolean list) throws SQLException {
         if (!list && !rs.next()) return null;
+
+        Date d;
+        try {
+            d = rs.getDate("payment_date_time");
+        } catch (Exception e) {
+            d = null;
+        }
+
         return new RedLightInfraction(rs.getLong("infraction_id"),
                 rs.getString("licence_plate"),
                 rs.getLong("radar_id"),
                 rs.getDate("infraction_date_time"),
                 rs.getDouble("price"),
                 rs.getBoolean("paid"),
-                rs.getDate("payment_date_time"),
+                d,
                 rs.getInt("vehicle_speed"),
                 rs.getInt("elapsed_time"),
                 rs.getInt("yellow_duration"));
@@ -1166,13 +1182,21 @@ public class MySQLRepository implements Repository {
 
     private DistanceInfraction mapDistanceInfraction(ResultSet rs, boolean list) throws SQLException {
         if (!list && !rs.next()) return null;
+
+        Date d;
+        try {
+            d = rs.getDate("payment_date_time");
+        } catch (Exception e) {
+            d = null;
+        }
+
         return new DistanceInfraction(rs.getLong("infraction_id"),
                 rs.getString("licence_plate"),
                 rs.getLong("radar_id"),
                 rs.getDate("infraction_date_time"),
                 rs.getDouble("price"),
                 rs.getBoolean("paid"),
-                rs.getDate("payment_date_time"),
+                d,
                 rs.getInt("distance_to_next_vehicle"),
                 rs.getInt("distance_limit"));
     }
