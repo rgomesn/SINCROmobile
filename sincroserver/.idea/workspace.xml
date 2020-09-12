@@ -5,140 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="18c29821-2154-4665-93e7-626fba2e0fd8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../ces.sincroapp/app/src/debug/res/values/google_maps_api.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ces.sincroapp/app/src/main/java/com/isel/sincroapp/data/model/infraction_detail/InfractionDetailViewModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ces.sincroapp/app/src/main/java/com/isel/sincroapp/data/model/infraction_detail/InfractionDetailViewModelFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ces.sincroapp/app/src/main/java/com/isel/sincroapp/data/model/map/MapViewModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ces.sincroapp/app/src/main/java/com/isel/sincroapp/data/model/map/MapViewModelFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ces.sincroapp/app/src/main/java/com/isel/sincroapp/data/model/payment/PaymentViewModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ces.sincroapp/app/src/main/java/com/isel/sincroapp/data/model/payment/PaymentViewModelFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ces.sincroapp/app/src/main/java/com/isel/sincroapp/data/model/vehicles/VehiclesViewModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ces.sincroapp/app/src/main/java/com/isel/sincroapp/data/model/vehicles/VehiclesViewModelFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ces.sincroapp/app/src/main/java/com/isel/sincroapp/services/NotificationService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ces.sincroapp/app/src/main/java/com/isel/sincroapp/services/Restarter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ces.sincroapp/app/src/main/java/com/isel/sincroapp/ui/infraction_detail/DistanceInfractionFragment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ces.sincroapp/app/src/main/java/com/isel/sincroapp/ui/infraction_detail/InfractionDetailActivity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ces.sincroapp/app/src/main/java/com/isel/sincroapp/ui/infraction_detail/RedLightInfractionFragment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ces.sincroapp/app/src/main/java/com/isel/sincroapp/ui/infraction_detail/SpeedInfractionFragment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ces.sincroapp/app/src/main/java/com/isel/sincroapp/ui/main/RecyclerItemClickListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ces.sincroapp/app/src/main/java/com/isel/sincroapp/ui/map/CustomLayout.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ces.sincroapp/app/src/main/java/com/isel/sincroapp/ui/map/MapActivity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ces.sincroapp/app/src/main/java/com/isel/sincroapp/ui/map/OnInfoWindowElemTouchListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ces.sincroapp/app/src/main/java/com/isel/sincroapp/ui/payment/PaymentActivity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ces.sincroapp/app/src/main/java/com/isel/sincroapp/ui/settings/SettingsActivity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ces.sincroapp/app/src/main/java/com/isel/sincroapp/ui/vehicles/ListVehicle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ces.sincroapp/app/src/main/java/com/isel/sincroapp/ui/vehicles/VehicleDetailActivity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ces.sincroapp/app/src/main/java/com/isel/sincroapp/ui/vehicles/VehicleRecyclerViewAdapter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ces.sincroapp/app/src/main/java/com/isel/sincroapp/ui/vehicles/VehiclesActivity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ces.sincroapp/app/src/main/res/layout/activity_infraction_detail.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ces.sincroapp/app/src/main/res/layout/activity_map.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ces.sincroapp/app/src/main/res/layout/activity_payment.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ces.sincroapp/app/src/main/res/layout/activity_vehicle_detail.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ces.sincroapp/app/src/main/res/layout/activity_vehicles.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ces.sincroapp/app/src/main/res/layout/content_infraction_detail.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ces.sincroapp/app/src/main/res/layout/content_vehicle_detail.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ces.sincroapp/app/src/main/res/layout/fragment_distance_infraction.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ces.sincroapp/app/src/main/res/layout/fragment_red_light_infraction.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ces.sincroapp/app/src/main/res/layout/fragment_speed_infraction.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ces.sincroapp/app/src/main/res/layout/map_relative_layout.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ces.sincroapp/app/src/main/res/layout/marker_info_window.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ces.sincroapp/app/src/main/res/layout/vehicle_item.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ces.sincroapp/app/src/main/res/menu/main_menu.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ces.sincroapp/app/src/main/res/values-round/strings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ces.sincroapp/app/src/main/res/values/arrays.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ces.sincroapp/app/src/main/res/xml/root_preferences.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ces.sincroapp/app/src/release/res/values/google_maps_api.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Definição Global.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Modelo relacional.mwb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Modelo relacional.mwb.bak" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Modelo relacional.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Proposta de Projeto - 39267.doc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Proposta de Projeto - 39267.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Proposta de Projeto - 39267.odt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Proposta de Projeto - 39267.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Registo.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Relatorio de progresso - G42.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Requisitos Funcionais - Administração.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Requisitos Funcionais - Consulta.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Requisitos Funcionais - Definições.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Requisitos Funcionais - Eventos de Trânsito.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Reuisitos Funcionais - nivel 0.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SINCROmobile-modelo entidade-relação.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SINCROmobile-modelo entidade-relação.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ces.sincroapp/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ces.sincroapp/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ces.sincroapp/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ces.sincroapp/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ces.sincroapp/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../ces.sincroapp/app/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ces.sincroapp/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ces.sincroapp/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ces.sincroapp/app/src/main/java/com/isel/sincroapp/data/entities/DistanceInfraction.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ces.sincroapp/app/src/main/java/com/isel/sincroapp/data/entities/DistanceInfraction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ces.sincroapp/app/src/main/java/com/isel/sincroapp/data/entities/Infraction.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ces.sincroapp/app/src/main/java/com/isel/sincroapp/data/entities/Infraction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ces.sincroapp/app/src/main/java/com/isel/sincroapp/data/entities/Radar.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ces.sincroapp/app/src/main/java/com/isel/sincroapp/data/entities/Radar.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ces.sincroapp/app/src/main/java/com/isel/sincroapp/data/entities/RedLightInfraction.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ces.sincroapp/app/src/main/java/com/isel/sincroapp/data/entities/RedLightInfraction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ces.sincroapp/app/src/main/java/com/isel/sincroapp/data/entities/SpeedInfraction.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ces.sincroapp/app/src/main/java/com/isel/sincroapp/data/entities/SpeedInfraction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ces.sincroapp/app/src/main/java/com/isel/sincroapp/data/entities/Vehicle.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ces.sincroapp/app/src/main/java/com/isel/sincroapp/data/entities/Vehicle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ces.sincroapp/app/src/main/java/com/isel/sincroapp/data/model/login/LoginViewModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ces.sincroapp/app/src/main/java/com/isel/sincroapp/data/model/login/LoginViewModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ces.sincroapp/app/src/main/java/com/isel/sincroapp/data/model/login/LoginViewModelFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ces.sincroapp/app/src/main/java/com/isel/sincroapp/data/model/login/LoginViewModelFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ces.sincroapp/app/src/main/java/com/isel/sincroapp/data/model/main/MainViewModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ces.sincroapp/app/src/main/java/com/isel/sincroapp/data/model/main/MainViewModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ces.sincroapp/app/src/main/java/com/isel/sincroapp/services/SINCROServerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ces.sincroapp/app/src/main/java/com/isel/sincroapp/services/SINCROServerService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ces.sincroapp/app/src/main/java/com/isel/sincroapp/ui/login/LoginActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ces.sincroapp/app/src/main/java/com/isel/sincroapp/ui/login/LoginActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ces.sincroapp/app/src/main/java/com/isel/sincroapp/ui/main/ListInfraction.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ces.sincroapp/app/src/main/java/com/isel/sincroapp/ui/main/ListInfraction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ces.sincroapp/app/src/main/java/com/isel/sincroapp/ui/main/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ces.sincroapp/app/src/main/java/com/isel/sincroapp/ui/main/MainActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ces.sincroapp/app/src/main/java/com/isel/sincroapp/ui/main/PastInfractionFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ces.sincroapp/app/src/main/java/com/isel/sincroapp/ui/main/PastInfractionFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ces.sincroapp/app/src/main/java/com/isel/sincroapp/ui/main/PastInfractionRecyclerViewAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ces.sincroapp/app/src/main/java/com/isel/sincroapp/ui/main/PastInfractionRecyclerViewAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ces.sincroapp/app/src/main/java/com/isel/sincroapp/ui/main/PendingInfractionFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ces.sincroapp/app/src/main/java/com/isel/sincroapp/ui/main/PendingInfractionFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ces.sincroapp/app/src/main/java/com/isel/sincroapp/ui/main/PendingInfractionRecyclerViewAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ces.sincroapp/app/src/main/java/com/isel/sincroapp/ui/main/PendingInfractionRecyclerViewAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ces.sincroapp/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ces.sincroapp/app/src/main/res/layout/activity_main.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ces.sincroapp/app/src/main/res/layout/fragment_past_infraction_list.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ces.sincroapp/app/src/main/res/layout/fragment_past_infraction_list.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ces.sincroapp/app/src/main/res/layout/fragment_pending_infraction_list.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ces.sincroapp/app/src/main/res/layout/fragment_pending_infraction_list.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ces.sincroapp/app/src/main/res/values-pt-rPT/strings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ces.sincroapp/app/src/main/res/values/dimens.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ces.sincroapp/app/src/main/res/values/dimens.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ces.sincroapp/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ces.sincroapp/app/src/main/res/values/strings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ces.sincroapp/app/src/main/res/values/styles.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ces.sincroapp/app/src/main/res/values/styles.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ces.sincroapp/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../ces.sincroapp/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/dev/app.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/dev/app.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/sincroserver_Web_exploded/WEB-INF/classes/com/isel/sincroserver/config/JwtTokenUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/sincroserver_Web_exploded/WEB-INF/classes/com/isel/sincroserver/config/JwtTokenUtils.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/sincroserver_Web_exploded/WEB-INF/classes/com/isel/sincroserver/config/SecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/sincroserver_Web_exploded/WEB-INF/classes/com/isel/sincroserver/config/SecurityConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/sincroserver_Web_exploded/WEB-INF/classes/com/isel/sincroserver/controllers/SincroAppController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/sincroserver_Web_exploded/WEB-INF/classes/com/isel/sincroserver/controllers/SincroAppController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/sincroserver_Web_exploded/WEB-INF/classes/com/isel/sincroserver/entities/Infraction.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/sincroserver_Web_exploded/WEB-INF/classes/com/isel/sincroserver/entities/Infraction.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/sincroserver_Web_exploded/WEB-INF/classes/com/isel/sincroserver/entities/SpeedInfraction.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/sincroserver_Web_exploded/WEB-INF/classes/com/isel/sincroserver/entities/SpeedInfraction.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/sincroserver_Web_exploded/WEB-INF/classes/com/isel/sincroserver/repositories/Constants.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/sincroserver_Web_exploded/WEB-INF/classes/com/isel/sincroserver/repositories/Constants.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/sincroserver_Web_exploded/WEB-INF/classes/com/isel/sincroserver/repositories/MySQLRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/sincroserver_Web_exploded/WEB-INF/classes/com/isel/sincroserver/repositories/MySQLRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/sincroserver_Web_exploded/WEB-INF/classes/com/isel/sincroserver/services/MySQLService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/sincroserver_Web_exploded/WEB-INF/classes/com/isel/sincroserver/services/MySQLService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/sincroserver_Web_exploded/WEB-INF/classes/queries.json" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/sincroserver_Web_exploded/WEB-INF/classes/queries.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/isel/sincroserver/config/JwtTokenUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/isel/sincroserver/config/JwtTokenUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/isel/sincroserver/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/isel/sincroserver/config/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/isel/sincroserver/controllers/SincroAppController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/isel/sincroserver/controllers/SincroAppController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/isel/sincroserver/entities/Infraction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/isel/sincroserver/entities/Infraction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/isel/sincroserver/entities/SpeedInfraction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/isel/sincroserver/entities/SpeedInfraction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/isel/sincroserver/repositories/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/isel/sincroserver/repositories/Constants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/isel/sincroserver/repositories/MySQLRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/isel/sincroserver/repositories/MySQLRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/isel/sincroserver/services/MySQLService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/isel/sincroserver/services/MySQLService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/isel/sincroserver/utils/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/isel/sincroserver/utils/Utils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/queries.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/queries.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/isel/sincroserver/config/JwtTokenUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/isel/sincroserver/config/JwtTokenUtils.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/isel/sincroserver/config/SecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/isel/sincroserver/config/SecurityConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/isel/sincroserver/controllers/SincroAppController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/isel/sincroserver/controllers/SincroAppController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/isel/sincroserver/entities/Infraction.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/isel/sincroserver/entities/Infraction.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/isel/sincroserver/entities/SpeedInfraction.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/isel/sincroserver/entities/SpeedInfraction.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/isel/sincroserver/repositories/Constants.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/isel/sincroserver/repositories/Constants.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/isel/sincroserver/repositories/MySQLRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/isel/sincroserver/repositories/MySQLRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/isel/sincroserver/services/MySQLService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/isel/sincroserver/services/MySQLService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/isel/sincroserver/utils/Utils.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/isel/sincroserver/utils/Utils.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/queries.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/queries.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../create_database.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deletes.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../diagrama_casos_de_uso.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../diagrama_casos_de_uso.odg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../diagrama_casos_de_uso_geral.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../diagrama_casos_de_uso_geral.odg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../evalMagicdraw-v0.0.1.mdzip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../inserts.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../scripts_mysql/create_database.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../scripts_mysql/create_database.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../scripts_mysql/inserts_infractions.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../scripts_mysql/inserts_infractions.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sincrodb-modelo-relacional.mwb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sincrodb-modelo-relacional.mwb.bak" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sincrodb-modelo-relacional.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../~$latorio de progresso - G42.docx" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -389,6 +256,7 @@
       <workItem from="1599669457510" duration="3637000" />
       <workItem from="1599776780548" duration="18305000" />
       <workItem from="1599849204718" duration="6671000" />
+      <workItem from="1599931808539" duration="2067000" />
     </task>
     <servers />
   </component>
@@ -514,11 +382,6 @@
           <url>file://$PROJECT_DIR$/src/main/java/com/isel/sincroserver/repositories/MySQLRepository.java</url>
           <line>1196</line>
           <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/isel/sincroserver/controllers/SincroAppController.java</url>
-          <line>289</line>
-          <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
