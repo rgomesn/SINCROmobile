@@ -333,7 +333,7 @@
   ],
   "insertDistanceInfraction" : [
     "insert into distance_infraction (infraction_id, distance_to_next_vehicle, distance_limit) ",
-    "values (:infraction_id, :vehicle_speed, :distance_to_next_vehicle, :distance_limit)"
+    "values (:infraction_id, :distance_to_next_vehicle, :distance_limit)"
   ],
   "getDistanceInfraction" : [
     "select i.*, di.* ",

@@ -1,0 +1,195 @@
+{
+	"info": {
+		"_postman_id": "075678d3-a9b6-47a3-978f-6fb16b3bf483",
+		"name": "SINCROMobile",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "beginRegistration",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "registerWithEmail",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "verifyRegistrationCode",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "registerLoginAndPassword",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "authenticate/login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"username\": \"joses\",\n\t\"password\": \"joses\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:8443/authenticate/login",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "8443",
+					"path": [
+						"authenticate",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "sincroapp/getInfractions",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJyZ24iLCJleHAiOjE1OTIyNjE0MjcsImlhdCI6MTU5MjI0MzQyN30.qtGYwnAGJvYXabtyHuqE0H9pmLTkUWCNMjxbRzLLT27kgo7fRD6zJSNiXoSAvZYyKmapMGf23AytQmuIj9kcQw",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"citizen\": {\r\n        \"citizen_id\": 1,\r\n        \"first_name\": \"Rafael\",\r\n        \"middle_name\": \"Gomes\",\r\n        \"last_name\": \"Nobre\",\r\n        \"cc_number\": \"123456789\",\r\n        \"driver_licence_number\": \"987654321\",\r\n        \"phone_number\": \"912345678\",\r\n        \"email\": \"rafael.gomes.nobre@gmail.com\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:8443/sincroapp/getInfractions",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "8443",
+					"path": [
+						"sincroapp",
+						"getInfractions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getRadars",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "giveVehicleAuthorization",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "requestVehicleSubscription",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getNewInfractions",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "insertSpeedInfraction",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "insertRedLightInfraction",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "insertDistanceInfraction",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

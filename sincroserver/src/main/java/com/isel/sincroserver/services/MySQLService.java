@@ -5,6 +5,7 @@ import com.isel.sincroserver.exception.SincroServerException;
 import com.isel.sincroserver.interfaces.repositories.Repository;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.time.Instant;
 import java.util.ArrayList;
@@ -15,6 +16,7 @@ import java.util.stream.Collectors;
 
 @Service
 @Qualifier("MySQLService")
+@Transactional
 public class MySQLService {
     @Qualifier("MySQLRepository")
     private final Repository repository;
