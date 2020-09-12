@@ -45,7 +45,7 @@ create table vehicle_authorization (
     licence_plate varchar(10) not null,
     _active boolean not null,
     authorization_start date not null,
-    authorization_end date not null,
+    authorization_end date,
     primary key (cc_number_owner, cc_number_driver, licence_plate),
     foreign key (cc_number_owner)
         references citizen (cc_number),
@@ -111,7 +111,7 @@ create table speed_infraction (
 	infraction_id bigint primary key,
     vehicle_speed integer not null,
     speed_limit integer not null,
-    direction char(1) not null,
+    direction varchar(100) not null,
     chasing_vehicle_speed integer,
     foreign key (infraction_id)
 		references infraction (infraction_id)
@@ -139,7 +139,7 @@ create table notification (
     infraction_id bigint,
     cc_number varchar(9),
     notified boolean not null,
-    notification_time timestamp not null,
+    notification_time timestamp,
     primary key (infraction_id, cc_number),
     foreign key (infraction_id)
 		references infraction (infraction_id),

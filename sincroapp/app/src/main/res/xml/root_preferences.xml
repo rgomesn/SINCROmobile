@@ -1,0 +1,30 @@
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto">
+    <PreferenceCategory app:title="@string/general_header">
+        <EditTextPreference
+            app:key="email"
+            app:title="@string/email_label"
+            app:useSimpleSummaryProvider="true" />
+
+        <EditTextPreference
+            app:key="phone_number"
+            app:title="@string/phone_number_label"
+            app:useSimpleSummaryProvider="true" />
+
+        <ListPreference
+            app:defaultValue="300000"
+            app:entries="@array/sync_time_entries"
+            app:entryValues="@array/sync_time_values"
+            app:key="sync_time"
+            app:title="@string/sync_time_title"
+            app:useSimpleSummaryProvider="true" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="@string/administration_header">
+        <Preference
+            app:key="vehicles"
+            app:title="@string/vehicle_settings"/>
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

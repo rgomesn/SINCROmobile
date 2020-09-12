@@ -1,0 +1,33 @@
+<resources>
+    <!-- Reply Preference -->
+    <string-array name="sync_time_entries">
+        <item>5 minutos</item>
+        <item>15 minutos</item>
+        <item>30 minutos</item>
+        <item>1 hora</item>
+        <item>24 hora</item>
+    </string-array>
+    <string-array name="sync_time_values">
+        <item>300000</item>
+        <item>900000</item>
+        <item>1800000</item>
+        <item>3600000</item>
+        <item>86400000</item>
+    </string-array>
+    <string-array name="sort_options_entries">
+        <item>Data Asc.</item>
+        <item>Data Dsc.</item>
+        <item>Preço Asc.</item>
+        <item>Preço Dsc.</item>
+        <item>Tipo</item>
+        <item>Radar</item>
+    </string-array>
+    <string-array name="sort_options_values">
+        <item>date_asc</item>
+        <item>date_dsc</item>
+        <item>price_asc</item>
+        <item>price_dsc</item>
+        <item>type</item>
+        <item>radar</item>
+    </string-array>
+</resources>

@@ -1,0 +1,92 @@
+<resources>
+    <string name="app_name">SINCROapp</string>
+    <string name="email_label">Email</string>
+    <string name="prompt_password">Palavra-passe</string>
+    <string name="action_sign_up">Registar</string>
+    <string name="action_sign_in">Entrar</string>
+    <string name="welcome">"Bem-vindo!"</string>
+    <string name="invalid_username">A Palavra-passe não é válida</string>
+    <string name="invalid_password">A Palavra-passe tem de conter mais de 5 caractéres</string>
+    <string name="login_failed">"O login faihou"</string>
+    <string name="cc_number_label">Número do cartão de cidadão</string>
+    <string name="register_title">Registo</string>
+    <string name="cc_number_input_fragment_summary_text">Insira o número do seu cartão de cidadão para começar o registo</string>
+    <string name="submit_button">Submeter</string>
+    <string name="information_review_fragment_label_cc_number">Número do cartão de cidadão:</string>
+    <string name="information_review_fragment_label_email">Email</string>
+    <string name="sent_email_text">Enviamos-lhe um email com um código de verificação, insira-o abaixo para confirmar a sua identidade</string>
+    <string name="verification_code_input">Código de verificação</string>
+    <string name="username_input">Nome de utilizador</string>
+    <string name="password_input">Palavra-passe</string>
+    <string name="full_name_label">Nome Completo</string>
+    <string name="driver_licence_number_label">Número da carta de condução</string>
+    <string name="phone_number_label">Número de telemóvel</string>
+    <string name="new_user_info_label">Crie o seu nome de utilizador e palavra-passe para completar o registo</string>
+    <string name="server_url">https://192.168.1.6:8443</string>
+    <string name="network_error">Ocorreu um erro de rede</string>
+    <string name="wrong_cc_number_input">Por favor insira um número de 9 digitos</string>
+    <string name="pending_infractions_title">Infrações Pendentes</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="past_infractions_title">Histórico</string>
+    <string name="menu_home">Início</string>
+    <string name="menu_map">Mapa</string>
+    <string name="menu_settings">Definições</string>
+    <string name="menu_logout">Sair</string>
+    <string name="open">Abrir</string>
+    <string name="close">Fechar</string>
+    <string name="title_activity_settings">SettingsActivity</string>
+    <string name="general_header">Geral</string>
+    <string name="administration_header">Administração</string>
+    <string name="sync_time_title">Intervalo de Sincronização</string>
+    <string name="authorize_user_title">Autorizar condutor</string>
+    <string name="authorize_user_off">Nome de utilizador/Matrícula</string>
+    <string name="authorized_user_title">Lista de utilizadores autorizados</string>
+    <string name="radar_infractions_link">Ver infrações para este radar</string>
+    <string name="menu_sort">Ordenar Infrações</string>
+    <string name="title_activity_map">Mapa</string>
+    <string name="sort_title">Ordenar por</string>
+    <string name="lang">Escolher idioma</string>
+    <string name="title_activity_infraction_detail">InfractionDetailActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="pay_button_text">Pagar</string>
+    <string name="detail_licence_plate_label">Matrícula</string>
+    <string name="detail_radar_label">Radar</string>
+    <string name="detail_date_time_label">Data/Hora</string>
+    <string name="detail_price_label">Preço</string>
+    <string name="detail_payment_date_time_label">Pago em</string>
+    <string name="detail_vehicle_speed">Velocidade</string>
+    <string name="detail_speed_limit">Limite de velocidade</string>
+    <string name="detail_direction">Sentido</string>
+    <string name="detail_chasing_vehicle_speed">Velocidade do veículo em perseguição</string>
+    <string name="detail_distance_to_next_vehicle">Distância para o próximo veículo</string>
+    <string name="detail_distance_limit">Distância mínima</string>
+    <string name="detail_elapsed_time">Tempo desde o sinal vermelho</string>
+    <string name="detail_yellow_duration">Duração do sinal amarelo</string>
+    <string name="speed_infraction_title">Infração de velocidade</string>
+    <string name="red_light_infraction_title">Infração de sinal vermelho</string>
+    <string name="distance_infraction_title">Infração de distância mínima</string>
+    <string name="title_activity_payment">PaymentActivity</string>
+    <!--
+    This string is used for square devices and overridden by hello_world in
+    values-round/strings.xml for round devices.
+    -->
+    <string name="hello_world">Hello Square World!</string>
+    <string name="confirm_payment_button">Confirmar pagamento</string>
+    <string name="vehicle_settings">Veículos</string>
+    <string name="title_activity_vehicles">VehiclesActivity</string>
+    <string name="title_activity_vehicle_detail">VehicleDetailActivity</string>
+    <string name="detail_make_label">Marca</string>
+    <string name="detail_model_label">Modelo</string>
+    <string name="detail_vehicle_date_label">Data do veículo</string>
+    <string name="detail_vehicle_category_label">Categoria</string>
+    <string name="autorize_button_text">Autorizar</string>
+</resources>
